@@ -11,15 +11,21 @@ This repository contains a Python implementation of a linear regression model fo
 Before running the code, ensure you have the following dependencies installed:
 
 -Python (version 3.x)
+
 -NumPy
+
 -pandas
+
 -matplotlib
+
 -scikit-learn
+
 You can install these dependencies using pip:
 
-'''
-pip install numpy pandas matplotlib scikit-learn
-'''
+```python
+python3 linear_regression_model.py
+```
+
 
 Dataset
 The dataset used for this project is stored in the "data" folder, which contains two CSV files:
@@ -29,9 +35,9 @@ test.csv: This file contains the test data, where you can evaluate the model's p
 Running the Model
 To train and test the linear regression model, run the linear_regression_model.py script:
 
-'''
+```python
 python3 linear_regression_model.py
-'''
+```
 
 The script will load the training and test data from the CSV files, preprocess the data, and fit the linear regression model using scikit-learn. The model's performance metrics, such as Mean Squared Error (MSE) and R-squared, will be displayed in the console.
 
