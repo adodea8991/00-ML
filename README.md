@@ -1,9 +1,7 @@
 # 00-ML
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png">
-  <img alt="A visualisation of the linear model" src="https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png">
-</picture>
-/Learning/Linear-regression/Linear_regression.png
+
+![House Price Prediction Lieanr Model Visualisation](https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png)
+
 
 ## Overview
 
