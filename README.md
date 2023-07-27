@@ -109,6 +109,57 @@ This project demonstrates the potential of machine learning in cancer diagnosis 
 
 
 
+# McDonald's Rating Prediction Project
+
+This repository contains the code and data for a McDonald's rating prediction project. The goal of the project is to predict the ratings of McDonald's stores based on various features such as store location, review content, and more.
+
+
+## Introduction
+
+The popularity of McDonald's makes it a significant player in the fast-food industry. Understanding customer feedback and predicting store ratings can provide valuable insights for improving customer satisfaction and business strategies. In this project, we aim to analyze McDonald's customer reviews, visualize the data, and build a predictive model to forecast store ratings.
+
+## Data
+
+The data used in this project is collected from various sources, including customer reviews, store locations, and ratings. The dataset includes features like reviewer ID, store name, category, store address, latitude, longitude, review content, rating count, review time, review, and rating.
+
+## Data Cleaning
+
+Before conducting any analysis or modeling, the data must be cleaned and preprocessed. The data cleaning process involves handling missing values, removing irrelevant or redundant features, and transforming data into a suitable format for analysis. Additionally, we dealt with encoding issues and removed any invalid characters from the review content column.
+
+## Data Visualization
+
+Visualizations are essential for gaining insights and understanding the relationships between different features in the dataset. In this project, we used various types of visualizations to explore the data, including:
+
+1. **Histogram**: Visualizing the distribution of ratings, which helps us understand the distribution of store ratings and identify potential outliers.
+
+!
+
+2. **Bar Plot**: Analyzing the average ratings for each store address, providing an overview of store performance based on location.
+
+!
+
+
+## Modeling
+
+To predict store ratings, we experimented with the Support Vector Regression (SVR) model. SVR is a powerful regression technique that works well for both linear and non-linear relationships between features and target variables. We trained the SVR model on a subset of the data, using features such as latitude, longitude, review length, and review word count to predict store ratings.
+
+## Conclusion
+
+The McDonald's rating prediction project aims to explore customer reviews and store ratings to gain insights into customer satisfaction. We cleaned and visualized the data to better understand the distribution of ratings and the performance of stores across different locations. Finally, we used the Support Vector Regression model to predict store ratings based on relevant features.
+
+Please note that the project is an exploratory analysis and prediction, and further improvements can be made by incorporating additional data and experimenting with different machine learning models.
+
+
+
+
+
+
+
+
+
+
+
+
 # Titanic Data Analysis Project
 
 ![Missing data](https://github.com/adodea8991/00-ML/blob/main/Titanic/Screenshot%202023-07-27%20at%2023.54.23.png)
