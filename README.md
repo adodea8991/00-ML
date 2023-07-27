@@ -51,7 +51,7 @@ pip install pandas seaborn matplotlib
 4. Run the `missing.py` script using the following command:
 
 ```bash
-python missing.py
+python3 missing.py
 ```
 
 5. The script will read the data from `train.csv`, create a heatmap, and display it. The heatmap will help visualize the missing data in the dataset, making it easier to identify the columns with missing values.
