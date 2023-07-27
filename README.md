@@ -29,16 +29,43 @@ Two machine learning models were chosen for this project:
 ### Model Performance
 
 1. **Random Forest:**
-   - Accuracy: 96%
-   - Key Takeaway: Random Forest achieved a high accuracy and performed well in predicting cancer diagnoses. However, it had slightly lower precision and recall for the malignant class compared to SVM.
+- Accuracy: 97%
+- Confusion Matrix:
+```
+[[87  2]
+ [ 3 51]]
+```
+- Classification Report:
+```
+ {'0': {'precision': 0.9666666666666667, 'recall': 0.9775280898876404, 'f1-score': 0.9720670391061451, 'support': 89.0}, '1': {'precision': 0.9622641509433962, 'recall': 0.9444444444444444, 'f1-score': 0.9532710280373832, 'support': 54.0}, 'accuracy': 0.965034965034965, 'macro avg': {'precision': 0.9644654088050315, 'recall': 0.9609862671660424, 'f1-score': 0.9626690335717641, 'support': 143.0}, 'weighted avg': {'precision': 0.9650041782117255, 'recall': 0.965034965034965, 'f1-score': 0.9649692447165427, 'support': 143.0}}
+```
+- Key Takeaway: Random Forest also achieved an accuracy of 97%, with slightly lower precision and recall compared to SVM for the malignant class.
 
 ![Random Forest Scores](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
 ![Feature Importance](https://github.com/adodea8991/00-ML/blob/main/Cancer/Random-forest-importance.png)
 
 
+
+
+
+
+
+
+
 2. **Support Vector Machine (SVM):**
-   - Accuracy: 97%
-   - Key Takeaway: SVM outperformed Random Forest with a slightly higher accuracy. It showed balanced precision and recall for both malignant and benign classes, making it a reliable model for cancer diagnosis.
+- Accuracy: 97%
+- Classification Report:
+```
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.97        89
+           1       0.96      0.94      0.95        54
+
+    accuracy                           0.97       143
+   macro avg       0.96      0.96      0.96       143
+weighted avg       0.97      0.97      0.96       143
+```
+- Key Takeaway: SVM achieved an impressive accuracy of 97% with balanced precision and recall for both malignant and benign classes, making it a reliable model for cancer diagnosis.
 
 ![SVM performance](https://github.com/adodea8991/00-ML/blob/main/Cancer/Svm-performance.png)
 ![Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Cancer/Confusion-matrix.png)
