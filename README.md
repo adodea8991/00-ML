@@ -128,15 +128,25 @@ Before conducting any analysis or modeling, the data must be cleaned and preproc
 
 ## Data Visualization
 
-Visualizations are essential for gaining insights and understanding the relationships between different features in the dataset. In this project, we used various types of visualizations to explore the data, including:
+### Histogram of Ratings
 
-1. **Histogram**: Visualizing the distribution of ratings, which helps us understand the distribution of store ratings and identify potential outliers.
+A histogram is plotted to visualize the distribution of McDonald's ratings. This helps us understand the overall distribution of ratings given by customers.
 
-!
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
 
-2. **Bar Plot**: Analyzing the average ratings for each store address, providing an overview of store performance based on location.
 
-!
+### Bar Plot of Average Ratings by Store Address
+
+A bar plot is generated to show the average ratings for each store address. This visualization helps us identify any variations in ratings based on different store locations.
+
+![Average rating by store](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Avg-rating-store.png)
+
+
+### Clustering
+
+In addition to the visualizations mentioned above, we also performed clustering analysis on the dataset. The clustering algorithm groups similar McDonald's restaurants based on certain features such as latitude, longitude, and review-related metrics.
+
+![Store Rating Clustering](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Review-placements.png)
 
 
 ## Modeling
@@ -148,14 +158,6 @@ To predict store ratings, we experimented with the Support Vector Regression (SV
 The McDonald's rating prediction project aims to explore customer reviews and store ratings to gain insights into customer satisfaction. We cleaned and visualized the data to better understand the distribution of ratings and the performance of stores across different locations. Finally, we used the Support Vector Regression model to predict store ratings based on relevant features.
 
 Please note that the project is an exploratory analysis and prediction, and further improvements can be made by incorporating additional data and experimenting with different machine learning models.
-
-
-
-
-
-
-
-
 
 
 
