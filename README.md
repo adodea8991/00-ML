@@ -1,22 +1,32 @@
-# 00-ML
+# Linear Model preview
 
-/Learning/Linear-regression/Linear_regression.png
+![House Price Prediction Lieanr Model Visualisation](https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png)
 
-#Overview
+
+## Overview
 
 This repository contains a Python implementation of a linear regression model for predicting house prices based on various features. The model is trained on a dataset of houses with their corresponding prices and features such as house size, number of bedrooms, and number of bathrooms.
 
-#Prerequisites
+## Prerequisites
 Before running the code, ensure you have the following dependencies installed:
 
 -Python (version 3.x)
+
 -NumPy
+
 -pandas
+
 -matplotlib
+
 -scikit-learn
+
 You can install these dependencies using pip:
 
-pip install numpy pandas matplotlib scikit-learn
+```python
+python3 linear_regression_model.py
+```
+
+
 Dataset
 The dataset used for this project is stored in the "data" folder, which contains two CSV files:
 
@@ -25,7 +35,10 @@ test.csv: This file contains the test data, where you can evaluate the model's p
 Running the Model
 To train and test the linear regression model, run the linear_regression_model.py script:
 
-python linear_regression_model.py
+```python
+python3 linear_regression_model.py
+```
+
 The script will load the training and test data from the CSV files, preprocess the data, and fit the linear regression model using scikit-learn. The model's performance metrics, such as Mean Squared Error (MSE) and R-squared, will be displayed in the console.
 
 Model Evaluation
