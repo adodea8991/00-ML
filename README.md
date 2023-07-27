@@ -21,7 +21,7 @@ To visualize the correlation matrix, we used the seaborn library to create a hea
 
 The correlation heatmap allowed us to understand which features are highly correlated and potentially redundant, as well as which features are highly correlated with the target variable (diagnosis). By analyzing the heatmap, we gained insights into the interdependencies among the features, which informed our feature selection and model building decisions.
 
-![House Price Prediction](https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png)
+![Parameter Heatmap](https://github.com/adodea8991/00-ML/blob/main/Cancer/Param-Heatmap.png)
 
 
 ### Model Selection
