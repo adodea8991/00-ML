@@ -32,9 +32,17 @@ Two machine learning models were chosen for this project:
    - Accuracy: 96%
    - Key Takeaway: Random Forest achieved a high accuracy and performed well in predicting cancer diagnoses. However, it had slightly lower precision and recall for the malignant class compared to SVM.
 
+![Random Forest Scores](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+![Feature Importance](https://github.com/adodea8991/00-ML/blob/main/Cancer/Random-forest-importance.png)
+
+
 2. **Support Vector Machine (SVM):**
    - Accuracy: 97%
    - Key Takeaway: SVM outperformed Random Forest with a slightly higher accuracy. It showed balanced precision and recall for both malignant and benign classes, making it a reliable model for cancer diagnosis.
+
+![SVM performance](https://github.com/adodea8991/00-ML/blob/main/Cancer/Svm-performance.png)
+![Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Cancer/Confusion-matrix.png)
+
 
 ### Key Takeaways and Next Steps
 
