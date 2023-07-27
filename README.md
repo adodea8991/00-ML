@@ -1,4 +1,4 @@
-# 00-ML
+# Linear Model preview
 
 ![House Price Prediction Lieanr Model Visualisation](https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png)
 
