@@ -4,9 +4,25 @@
 
 This project focuses on predicting cancer diagnosis (Malignant or Benign) using machine learning techniques. The dataset used in this project is from the 'data.csv' file, which contains various features related to breast cancer patients. The primary objective is to develop accurate models that can assist in early cancer detection and improve patient outcomes.
 
-### Data
 
-The 'data.csv' file contains information about breast cancer patients, including features like radius_mean, texture_mean, smoothness_mean, etc. The target variable is the 'diagnosis,' where 'M' represents malignant and 'B' represents benign.
+### Dataset
+
+The dataset we used for this project is stored in a file called `data.csv`. It contains various features related to cell characteristics, such as radius_mean, texture_mean, perimeter_mean, area_mean, etc., along with the diagnosis (target variable). Before starting the analysis and modeling, we performed initial data exploration to gain insights into the dataset. As part of this exploration, we created a heatmap to understand the correlations between different features in the dataset.
+
+### Data Exploration
+
+During the data exploration phase, we first loaded the dataset into a pandas DataFrame. Since the diagnosis column contained non-numeric values ('M' and 'B'), we converted it into binary numeric values. 'M' was mapped to 1 (malignant) and 'B' to 0 (benign).
+
+Next, we created a correlation matrix using the `corr()` function from pandas to measure the linear relationships between numeric features in the dataset. The correlation matrix provides valuable insights into how features are related to each other, which is crucial for feature selection and model building.
+
+### Correlation Heatmap
+
+To visualize the correlation matrix, we used the seaborn library to create a heatmap. The heatmap helps us visually identify the strength and direction of the relationships between features. Positive values indicate positive correlations, while negative values indicate negative correlations. A value close to 1 or -1 indicates a strong correlation, while values close to 0 indicate a weak or no correlation.
+
+The correlation heatmap allowed us to understand which features are highly correlated and potentially redundant, as well as which features are highly correlated with the target variable (diagnosis). By analyzing the heatmap, we gained insights into the interdependencies among the features, which informed our feature selection and model building decisions.
+
+![House Price Prediction](https://github.com/adodea8991/00-ML/blob/main/Learning/Linear-regression/Linear_regression.png)
+
 
 ### Model Selection
 
