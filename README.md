@@ -115,9 +115,10 @@ This repository contains the code and data for the Book project, where we analyz
 
 **Data Pre-analysis:**
 Before diving into modeling, we performed data pre-analysis using various visualization techniques, including heatmaps, scatter plots, histograms, and box plots. These visualizations helped us understand the distribution of the target variable (book_depository_stars) and the features. We used heatmaps to identify any correlations between variables and scatter plots to observe relationships between book_depository_stars and other features. Histograms and box plots allowed us to analyze the spread and central tendency of the target variable and features, helping us detect potential outliers and skewed distributions.
-![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
-![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
-![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+![Heatmap Missing Data](https://github.com/adodea8991/00-ML/blob/main/Books/Missing-data.png)
+![Scatterplot Price X Book Depository Stars](https://github.com/adodea8991/00-ML/blob/main/Books/Data-scatter.png)
+![Histogram Book Repository Stars](https://github.com/adodea8991/00-ML/blob/main/Books/Histo.png)
+![Price Box Plot](https://github.com/adodea8991/00-ML/blob/main/Books/Price-box-plot.png)
 
 
 
@@ -127,10 +128,10 @@ To ensure the data's quality and suitability for modeling, we cleaned the data u
 **Additional Visualizations:**
 The "clean.py" script not only produces the cleaned dataset but also generates two insightful visualizations:
 1. Average book depository stars per category: This visualization provides a quick overview of the average book_depository_stars for each category, helping us identify categories with higher or lower average ratings.
-![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+![Average book depository stars per category](https://github.com/adodea8991/00-ML/blob/main/Books/Avg-stars-category.png)
 
 2. Box plot price per category: The box plot helps us visualize the distribution of book prices within each category, allowing us to spot differences in pricing across different book categories.
-![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+![Box plot price per category](https://github.com/adodea8991/00-ML/blob/main/Books/Box-plot-price-category.png)
 
 
 **Modeling:**
