@@ -1,53 +1,44 @@
 import pandas as pd
-import seaborn as sns
+import numpy as np
 import matplotlib.pyplot as plt
 
-# Step 1: Load the CSV file into a pandas DataFrame
-df = pd.read_csv("main_dataset.csv")
+# Load the data from the CSV file
+data = pd.read_csv("main_dataset.csv")
 
-# Step 2: Create a boolean DataFrame representing missing values
-missing_values = df.isnull()
+# Interpolate missing values in the "price" column
+data["price"] = pd.to_numeric(data["price"], errors="coerce")
+data["price"] = data["price"].interpolate()
 
-# Step 3: Use seaborn to create the heatmap for missing values
-plt.figure(figsize=(10, 6))
-sns.heatmap(missing_values, cbar=False, cmap="viridis")
-plt.title("Missing Values Heatmap")
+# Ensure all resulting values are positive
+data["price"] = data["price"].apply(lambda x: max(x, 0))
+
+# Keep only one decimal point
+data["price"] = data["price"].apply(lambda x: round(x, 1))
+
+# Extract the columns for the plots
+book_depository_stars = data["book_depository_stars"]
+price = data["price"]
+format_data = data["format"]
+
+# Scatterplot
+plt.figure(figsize=(8, 6))
+plt.scatter(price, book_depository_stars, alpha=0.6)
+plt.xlabel('Price')
+plt.ylabel('Book Depository Stars')
+plt.title('Scatterplot of Price vs. Book Depository Stars')
 plt.show()
 
-# Additional View 1: Book Depository Stars per category
-average_stars_per_category = df.groupby("category")["book_depository_stars"].mean()
-plt.figure(figsize=(10, 6))
-sns.barplot(x=average_stars_per_category.index, y=average_stars_per_category.values)
-plt.xticks(rotation=45, ha='right')
-plt.xlabel("Category")
-plt.ylabel("Average Book Depository Stars")
-plt.title("Average Book Depository Stars per Category")
+# Histogram of Book Depository Stars
+plt.figure(figsize=(8, 6))
+plt.hist(book_depository_stars, bins=20, edgecolor='black')
+plt.xlabel('Book Depository Stars')
+plt.ylabel('Frequency')
+plt.title('Histogram of Book Depository Stars')
 plt.show()
 
-# Additional View 2: Box plot of "price" based on "category" (taking currency into account)
-# Clean "price" column by removing non-numeric characters
-df["price"] = df["price"].str.replace(r'[^\d.]+', '', regex=True).astype(float)
-
-plt.figure(figsize=(10, 6))
-sns.boxplot(x="category", y="price", hue="currency", data=df)
-plt.xticks(rotation=45, ha='right')
-plt.xlabel("Category")
-plt.ylabel("Price")
-plt.title("Box Plot of Price based on Category")
-plt.legend(title="Currency")
-plt.show()
-
-# Additional View 3: Average delta between "price" and "old_price" per category
-# Clean "old_price" column by removing non-numeric characters and replace empty strings with NaN
-df["old_price"] = df["old_price"].replace('', pd.NA).str.replace(r'[^\d.]+', '', regex=True).astype(float)
-
-# Calculate the "price_delta" by filling NaN values with zeros
-df["price_delta"] = df["old_price"].fillna(0) - df["price"]
-average_delta_per_category = df.groupby("category")["price_delta"].mean()
-plt.figure(figsize=(10, 6))
-sns.barplot(x=average_delta_per_category.index, y=average_delta_per_category.values)
-plt.xticks(rotation=45, ha='right')
-plt.xlabel("Category")
-plt.ylabel("Average Price Delta")
-plt.title("Average Delta between Price and Old Price per Category")
+# Box Plot of Price
+plt.figure(figsize=(8, 6))
+plt.boxplot(price)
+plt.ylabel('Price')
+plt.title('Box Plot of Price')
 plt.show()

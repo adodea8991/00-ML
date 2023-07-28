@@ -20,7 +20,7 @@ format_encoder = LabelEncoder()
 df["format_encoded"] = format_encoder.fit_transform(df["format"])
 
 # Remove unnecessary columns
-df.drop(columns=["image", "name", "author", "category", "format"], inplace=True)
+df.drop(columns=["image", "name", "author", "category", "currency", "img_paths","format"], inplace=True)
 
 # Prepare the data
 X = df.drop(columns=["price"])

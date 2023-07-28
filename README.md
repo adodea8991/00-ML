@@ -109,6 +109,61 @@ This project demonstrates the potential of machine learning in cancer diagnosis 
 
 
 
+**Book Project**
+
+This repository contains the code and data for the Book project, where we analyze and build models to predict book prices and book_depository_stars based on various features.
+
+**Data Pre-analysis:**
+Before diving into modeling, we performed data pre-analysis using various visualization techniques, including heatmaps, scatter plots, histograms, and box plots. These visualizations helped us understand the distribution of the target variable (book_depository_stars) and the features. We used heatmaps to identify any correlations between variables and scatter plots to observe relationships between book_depository_stars and other features. Histograms and box plots allowed us to analyze the spread and central tendency of the target variable and features, helping us detect potential outliers and skewed distributions.
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+
+
+
+**Data Cleaning:**
+To ensure the data's quality and suitability for modeling, we cleaned the data using the "clean.py" script. This script performs data cleaning tasks such as removing unnecessary columns, handling missing values, and transforming data types to appropriate formats. The cleaned data is saved as "clean_data.csv," which is used for subsequent analysis.
+
+**Additional Visualizations:**
+The "clean.py" script not only produces the cleaned dataset but also generates two insightful visualizations:
+1. Average book depository stars per category: This visualization provides a quick overview of the average book_depository_stars for each category, helping us identify categories with higher or lower average ratings.
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+
+2. Box plot price per category: The box plot helps us visualize the distribution of book prices within each category, allowing us to spot differences in pricing across different book categories.
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+
+
+**Modeling:**
+For predicting book prices and book_depository_stars, we implemented two models:
+1. Linear Regression: The linear regression model attempts to establish a linear relationship between the features and the target variable (price). However, the model's performance was not satisfactory, as indicated by the following metrics:
+   - Mean Squared Error: 161.63086648692223
+   - R-squared: 0.09936935108361933
+
+2. Logistic Regression: The logistic regression model aims to predict the probability of book_depository_stars belonging to a certain class. However, similar to the linear regression model, it did not perform well for this dataset.
+
+**Conclusion and Future Work:**
+Based on the results obtained from the models used in this analysis, it is evident that the selected models were not appropriate for this dataset. The low R-squared and high mean squared error indicate that the models did not effectively capture the underlying relationships between the features and target variables.
+
+To improve the analysis, we recommend exploring alternative models, such as Random Forest or Neural Networks, which may better capture the complex relationships within the data. Additionally, feature engineering and further data preprocessing could also play a significant role in improving model performance.
+
+Overall, this project serves as a starting point for future analyses, with the potential to enhance the models and extract more valuable insights from the data.
+
+Feel free to explore the code and data in this repository and experiment with different models and data preprocessing techniques for further improvements. Happy analyzing!
+
+*Note: The original dataset used in this project is available in "main_dataset.csv," while the cleaned dataset is provided in "clean_data.csv." The code for data preprocessing, visualizations, and model development can be found in the respective Python scripts within the repository.*
+
+
+
+
+
+
+
+
+
+
+
+
+
 # McDonald's Rating Prediction Project
 
 This repository contains the code and data for a McDonald's rating prediction project. The goal of the project is to predict the ratings of McDonald's stores based on various features such as store location, review content, and more.
