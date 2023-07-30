@@ -236,7 +236,7 @@ For the classification task, we used `KNeighborsClassifier` from `sklearn.neighb
 
 ### Regression Task
 
-![Regression Results](https://github.com/adodea8991/00-ML/blob/Fake-money/Knn-regression.png)
+![Regression Results](https://github.com/adodea8991/00-ML/blob/main/Fake-money/Knn-regression.png)
 
 For the regression task, we used `KNeighborsRegressor` from `sklearn.neighbors` to build the KNN model. Similarly, we set `n_neighbors` to 5 for this regression model.
 
