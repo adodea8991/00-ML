@@ -2,12 +2,113 @@
 
 ## Table of Contents
 
-1. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-2. [Book Price Prediction Model](#book-price-prediction-model)
-3. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
-4. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
-5. [Titanic Data Analysis Project](#titanic-data-analysis-project)
-6. [Housing Linear Model](#housing-linear-model)
+1. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
+2. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+3. [Book Price Prediction Model](#book-price-prediction-model)
+4. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
+5. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+6. [Titanic Data Analysis Project](#titanic-data-analysis-project)
+7. [Housing Linear Model](#housing-linear-model)
+
+
+
+
+
+## Credit-Classification-Project
+
+This repository contains code for a machine learning project that aims to predict credit classification using various regression algorithms. The project involves data pre-processing, training and evaluating linear regression, decision tree, and K-Nearest Neighbors (KNN) regression models, and visualizing their performance.
+
+### Overview
+
+The main goal of this project is to develop regression models that can predict credit classification based on various features in the dataset. We will use the following regression algorithms:
+
+1. Linear Regression
+2. Decision Tree Regression
+3. K-Nearest Neighbors (KNN) Regression
+
+The dataset used for this project contains information about credit applicants and their respective credit classification. The dataset requires pre-processing due to some missing values and mixed data types in certain columns.
+
+### Step-by-Step Implementation
+
+### 1. Data Pre-processing
+
+
+![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/credit-classification/training_heatmap.png)
+![Training Histogram](https://github.com/adodea8991/00-ML/blob/main/credit-classification/training_histogram.png)
+![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/credit-classification/training_boxplot.png)
+
+
+The dataset contains missing values and columns with mixed data types. The following steps are performed for data pre-processing:
+
+- Drop rows with missing values in the target column (D).
+- Drop unnecessary columns (columns J onwards).
+- Encode categorical features (column I) using one-hot encoding.
+
+![Test Heatmap](https://github.com/adodea8991/00-ML/blob/main/credit-classification/test_heatmap.png)
+![Test Histogram](https://github.com/adodea8991/00-ML/blob/main/credit-classification/test_histogram.png)
+![Test Boxplot](https://github.com/adodea8991/00-ML/blob/main/credit-classification/test_boxplot.png)
+
+### 2. Linear Regression
+
+![Linear Regression Model](https://github.com/adodea8991/00-ML/blob/main/credit-classification/linear-model.png)
+![Linear Regression Performance](https://github.com/adodea8991/00-ML/blob/main/credit-classification/linear-performance.png)
+
+
+The linear regression algorithm is implemented to predict the credit classification. We use the following steps:
+
+- Separate the features and labels from the pre-processed data.
+- Train the linear regression model on the training data.
+- Evaluate the model's performance on the test data using Mean Squared Error and R-squared score.
+- Visualize the model's performance using a scatter plot of predicted vs. actual values.
+
+### 3. Decision Tree Regression
+
+![Decision Tree Model](https://github.com/adodea8991/00-ML/blob/main/credit-classification/decision-model.png)
+![Decision Tree Model Performance](https://github.com/adodea8991/00-ML/blob/main/credit-classification/decision-tree-performance.png)
+
+The decision tree regression algorithm is implemented to predict credit classification. The steps include:
+
+- Separate the features and labels from the pre-processed data.
+- Train the decision tree regression model on the training data.
+- Evaluate the model's performance on the test data using Mean Squared Error and R-squared score.
+- Visualize the model's performance using a scatter plot of predicted vs. actual values.
+- Display the decision tree structure.
+
+### 4. K-Nearest Neighbors (KNN) Regression
+
+![KNN Model](https://github.com/adodea8991/00-ML/blob/main/credit-classification/knn-model.png)
+![KNN Model Performance](https://github.com/adodea8991/00-ML/blob/main/credit-classification/knn-performance.png)
+
+The KNN regression algorithm is implemented to predict credit classification. The steps include:
+
+- Separate the features and labels from the pre-processed data.
+- Train the KNN regression model on the training data with a chosen value of k.
+- Evaluate the model's performance on the test data using Mean Squared Error and R-squared score.
+- Visualize the model's performance using a scatter plot of predicted vs. actual values.
+- Display the KNN model's performance in a pop-up window.
+
+### Visualizations
+
+The following visualizations are included in the project:
+
+1. Linear Regression Model: A scatter plot of predicted vs. actual values for the test dataset.
+2. Decision Tree Model: A scatter plot of predicted vs. actual values for the test dataset.
+3. KNN Regression Model: A scatter plot of predicted vs. actual values for the test dataset.
+
+### Conclusion
+
+Through this project, we explored the application of three regression algorithms for credit classification prediction. The decision tree and KNN regression models showed better performance compared to linear regression, with higher R-squared scores and lower Mean Squared Error.
+
+This project demonstrates the importance of data pre-processing and model evaluation in machine learning tasks. Additionally, the visualization of model performance provides insights into the model's effectiveness in predicting credit classification. We've learned some models fair VERY DIFFERENTLY from others and it's highly important to cross-validate models.
+
+
+### Dependencies
+
+- Python 3
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
 
 
 
