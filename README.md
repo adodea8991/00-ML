@@ -49,8 +49,8 @@ Moreover, we incorporated L2 regularization (ridge regularization) into the cost
 After implementing the logistic regression model, we achieved an accuracy of approximately 99%, which indicates that the model is performing well on the test set. The confusion matrix revealed that the model made very few misclassifications. It correctly predicted 107 malignant tumors (true positives) and 62 benign tumors (true negatives). There was only one false positive and one false negative, indicating a high level of precision and recall.
 
 
-![Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
-![Cost Function](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+![Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Cancer/Confusion-matrix.png)
+![Cost Function](https://github.com/adodea8991/00-ML/blob/main/Cancer/Cost-function.png)
 
 
 
