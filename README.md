@@ -58,7 +58,7 @@ After implementing the logistic regression model, we achieved an accuracy of app
 
 ### Model Selection
 
-Two machine learning models were chosen for this project:
+Two other machine learning models were chosen for this project:
 
 1. **Random Forest:** Random Forest is an ensemble learning method that constructs multiple decision trees and combines their outputs to enhance accuracy and reduce overfitting.
 
@@ -313,18 +313,61 @@ python3 missing.py
 
 5. The script will read the data from `train.csv`, create a heatmap, and display it. The heatmap will help visualize the missing data in the dataset, making it easier to identify the columns with missing values.
 
+
+## Decision Trees for Titanic Dataset 
+
+In this repository, we have implemented decision trees for both classification and regression tasks using the Titanic dataset. The Titanic dataset contains various features of passengers, such as age, sex, fare, and class, and whether they survived the disaster or not. The dataset is preprocessed to handle missing values and convert categorical variables to numerical using one-hot encoding.
+
+## Why Decision Trees?
+
+We chose decision trees because they are simple yet powerful algorithms that can be used for both classification and regression tasks. Decision trees are easy to understand and interpret, making them suitable for exploratory data analysis and providing insights into the data.
+
+For classification tasks, decision trees partition the feature space into regions and assign each region the class that is most prevalent within that region. For regression tasks, decision trees assign the average value of the target variable to each leaf node.
+
+## Implementation Details
+
+1. **Preprocessing:** We dropped irrelevant features like "Name," "Ticket," and "Cabin" as they are not expected to have a direct impact on the survival or age of passengers. Rows with missing values were removed from the dataset to ensure data integrity.
+
+2. **One-Hot Encoding:** To handle categorical features like "Sex" and "Embarked," we used one-hot encoding, converting them into numerical representations. This ensures that the decision tree model can handle categorical data effectively.
+
+3. **Decision Tree for Classification:** For the classification task, we used features like "Pclass," "Sex," "Age," "SibSp," "Parch," "Fare," "Embarked_Q," and "Embarked_S" to predict whether a passenger survived or not. The decision tree achieved an accuracy of approximately 0.71 on the test set.
+
+![Visual of the Decision Tree for Classification](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+
+
+4. **Decision Tree for Regression:** For the regression task, we used features like "Pclass," "Sex," "SibSp," "Parch," "Fare," "Embarked_Q," and "Embarked_S" to predict the age of a passenger. The regression decision tree achieved a mean squared error of approximately 263.37 on the test set.
+
+![Visual of the Decision Tree for Regression](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+
+
+5. **Visualization:** We visualized both decision trees using the `plot_tree` function from scikit-learn. This provides an intuitive representation of the decision-making process of the tree.
+
+6. **Performance Output:** We displayed the accuracy and mean squared error in a graphical user interface (GUI) using tkinter, providing a quick summary of the model performance.
+
+![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+
+
 ## Conclusion
 
-By analyzing the Titanic dataset and visualizing the missing data, we aim to gain valuable insights into the factors that influenced survival rates. This project can serve as a starting point for further data analysis, feature engineering, and machine learning modeling for predicting survival probabilities on the Titanic.
+The decision tree models achieved reasonably good accuracy and mean squared error on the test data. The classification decision tree demonstrated the capability to predict passenger survival based on given features, while the regression decision tree could predict passenger ages.
 
-Feel free to contribute to this project by adding more analyses, visualizations, or even implementing machine learning algorithms to predict passenger survival.
+Next Steps:
+1. **Hyperparameter Tuning:** We can perform hyperparameter tuning to optimize the decision tree models further. Parameters like the maximum depth of the tree and the minimum number of samples required to split a node can be fine-tuned to improve model performance.
+2. **Ensemble Methods:** Ensemble methods like Random Forests or Gradient Boosting can be explored to enhance model accuracy and robustness.
+3. **Feature Engineering:** Additional feature engineering techniques might be applied to extract more valuable information from the existing features.
+4. **Data Scaling:** We can investigate the impact of feature scaling on model performance.
+5. **Model Evaluation:** It is essential to evaluate the model's performance on a separate validation set or through cross-validation to ensure it generalizes well to new, unseen data.
 
-Let's explore the Titanic dataset and discover intriguing patterns! 🚢🔍
 
 
 
 
-# Linear Model preview
+
+
+
+
+
+# Generic Linear Model preview
 
 ![House Price Prediction Lieanr Model Visualisation](https://github.com/adodea8991/00-ML/blob/main/Linear-housing/Linear_regression.png)
 
