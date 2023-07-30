@@ -1,4 +1,18 @@
-## Cancer Diagnosis using Machine Learning
+# Machine Learning Projects Portofolio
+
+## Table of Contents
+
+1. [Cancer Diagnosis using Machine Learning](#Cancer-Diagnosis-Using-Machine-Learning)
+2. [Book Project](#Book-Project)
+3. [K-Nearest Neighbour Fake Bills Classification and Regression](#KNN-Fake-Bills-Classification-and-Regression)
+4. [McDonald's Rating Prediction Project](#McDonalds-Rating-Prediction-Project)
+5. [Titanic Data Analysis Project](#Titanic-Data-Analysis-Project)
+6. [Housing Linear Model](#Housing-Linear-Model)
+
+
+
+
+## Cancer-Diagnosis-Using-Machine-Learning
 
 ### Overview
 
@@ -146,7 +160,7 @@ This project demonstrates the potential of machine learning in cancer diagnosis 
 
 
 
-**Book Project**
+**Book-Project**
 
 This repository contains the code and data for the Book project, where we analyze and build models to predict book prices and book_depository_stars based on various features.
 
@@ -196,7 +210,7 @@ Feel free to explore the code and data in this repository and experiment with di
 
 
 
-# K-Nearest Neighbors (KNN) Project - Fake Bills Classification and Regression
+# KNN-Fake-Bills-Classification-and-Regression
 
 In this project, we implemented the K-Nearest Neighbors (KNN) algorithm for both classification and regression tasks using a dataset containing information about fake bills. We'll go through each step of the project and discuss the results we obtained.
 
@@ -260,7 +274,7 @@ Future steps for improvement could involve exploring other machine learning algo
 
 
 
-# McDonald's Rating Prediction Project
+# McDonalds-Rating-Prediction-Project
 
 This repository contains the code and data for a McDonald's rating prediction project. The goal of the project is to predict the ratings of McDonald's stores based on various features such as store location, review content, and more.
 
@@ -313,7 +327,7 @@ Please note that the project is an exploratory analysis and prediction, and furt
 
 
 
-# Titanic Data Analysis Project
+# Titanic-Data-Analysis-Project
 
 ![Missing data](https://github.com/adodea8991/00-ML/blob/main/Titanic/Screenshot%202023-07-27%20at%2023.54.23.png)
 
@@ -430,7 +444,7 @@ Next Steps:
 
 
 
-# Generic Linear Model preview
+# Housing-Linear-Model
 
 ![House Price Prediction Lieanr Model Visualisation](https://github.com/adodea8991/00-ML/blob/main/Linear-housing/Linear_regression.png)
 
