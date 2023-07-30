@@ -33,9 +33,9 @@ The dataset used for this project contains information about credit applicants a
 ### 1. Data Pre-processing
 
 
-![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/credit-classification/training_heatmap.png)
-![Training Histogram](https://github.com/adodea8991/00-ML/blob/main/credit-classification/training_histogram.png)
-![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/credit-classification/training_boxplot.png)
+![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/training_heatmap.png)
+![Training Histogram](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/training_histogram.png)
+![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/training_boxplot.png)
 
 
 The dataset contains missing values and columns with mixed data types. The following steps are performed for data pre-processing:
@@ -44,14 +44,14 @@ The dataset contains missing values and columns with mixed data types. The follo
 - Drop unnecessary columns (columns J onwards).
 - Encode categorical features (column I) using one-hot encoding.
 
-![Test Heatmap](https://github.com/adodea8991/00-ML/blob/main/credit-classification/test_heatmap.png)
-![Test Histogram](https://github.com/adodea8991/00-ML/blob/main/credit-classification/test_histogram.png)
-![Test Boxplot](https://github.com/adodea8991/00-ML/blob/main/credit-classification/test_boxplot.png)
+![Test Heatmap](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/test_heatmap.png)
+![Test Histogram](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/test_histogram.png)
+![Test Boxplot](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/test_boxplot.png)
 
 ### 2. Linear Regression
 
-![Linear Regression Model](https://github.com/adodea8991/00-ML/blob/main/credit-classification/linear-model.png)
-![Linear Regression Performance](https://github.com/adodea8991/00-ML/blob/main/credit-classification/linear-performance.png)
+![Linear Regression Model](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/Linear-model.png)
+![Linear Regression Performance](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/Linear-performance.png)
 
 
 The linear regression algorithm is implemented to predict the credit classification. We use the following steps:
@@ -63,8 +63,8 @@ The linear regression algorithm is implemented to predict the credit classificat
 
 ### 3. Decision Tree Regression
 
-![Decision Tree Model](https://github.com/adodea8991/00-ML/blob/main/credit-classification/decision-model.png)
-![Decision Tree Model Performance](https://github.com/adodea8991/00-ML/blob/main/credit-classification/decision-tree-performance.png)
+![Decision Tree Model](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/Decision-model.png)
+![Decision Tree Model Performance](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/Decision-tree-performance.png)
 
 The decision tree regression algorithm is implemented to predict credit classification. The steps include:
 
@@ -76,8 +76,8 @@ The decision tree regression algorithm is implemented to predict credit classifi
 
 ### 4. K-Nearest Neighbors (KNN) Regression
 
-![KNN Model](https://github.com/adodea8991/00-ML/blob/main/credit-classification/knn-model.png)
-![KNN Model Performance](https://github.com/adodea8991/00-ML/blob/main/credit-classification/knn-performance.png)
+![KNN Model](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/knn-model.png)
+![KNN Model Performance](https://github.com/adodea8991/00-ML/blob/main/Credit-Classification/knn-performance.png)
 
 The KNN regression algorithm is implemented to predict credit classification. The steps include:
 
@@ -103,7 +103,6 @@ This project demonstrates the importance of data pre-processing and model evalua
 
 
 ### Dependencies
-
 - Python 3
 - pandas
 - numpy
