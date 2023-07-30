@@ -332,19 +332,19 @@ For classification tasks, decision trees partition the feature space into region
 
 3. **Decision Tree for Classification:** For the classification task, we used features like "Pclass," "Sex," "Age," "SibSp," "Parch," "Fare," "Embarked_Q," and "Embarked_S" to predict whether a passenger survived or not. The decision tree achieved an accuracy of approximately 0.71 on the test set.
 
-![Visual of the Decision Tree for Classification](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+![Visual of the Decision Tree for Classification](https://github.com/adodea8991/00-ML/blob/main/Titanic/Classification-tree.png)
 
 
 4. **Decision Tree for Regression:** For the regression task, we used features like "Pclass," "Sex," "SibSp," "Parch," "Fare," "Embarked_Q," and "Embarked_S" to predict the age of a passenger. The regression decision tree achieved a mean squared error of approximately 263.37 on the test set.
 
-![Visual of the Decision Tree for Regression](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+![Visual of the Decision Tree for Regression](https://github.com/adodea8991/00-ML/blob/main/Titanic/Regression-tree.png)
 
 
 5. **Visualization:** We visualized both decision trees using the `plot_tree` function from scikit-learn. This provides an intuitive representation of the decision-making process of the tree.
 
 6. **Performance Output:** We displayed the accuracy and mean squared error in a graphical user interface (GUI) using tkinter, providing a quick summary of the model performance.
 
-![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
 
 
 ## Conclusion
