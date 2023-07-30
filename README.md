@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-2. [Book Project](#book-project)
+2. [Book Price Prediction Model](#book-price-prediction-model)
 3. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
 4. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
 5. [Titanic Data Analysis Project](#titanic-data-analysis-project)
@@ -160,7 +160,7 @@ This project demonstrates the potential of machine learning in cancer diagnosis 
 
 
 
-## Book-Project
+## Book-Price-Prediction-Model
 
 This repository contains the code and data for the Book project, where we analyze and build models to predict book prices and book_depository_stars based on various features.
 
