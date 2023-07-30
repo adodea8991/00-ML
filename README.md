@@ -14,6 +14,62 @@
 
 
 
+# Deer Identifier with Neural Netwroks
+
+![Deer Identifier](images/deer.jpg)
+
+This project aims to develop a deep learning model to identify whether an image contains a deer or not. The model is trained on a dataset of deer images and non-deer images and uses the powerful MobileNetV2 architecture for image classification. The model is then deployed as an interactive GUI application where users can input an image filepath to get a prediction of whether the image contains a deer or not.
+
+## Dataset
+
+The dataset used for training and testing the model is organized into two folders:
+
+1. `/Users/macbookair/Desktop/Combined-data-set/deer`: Contains images of deer labeled as "deer1", "deer2", etc.
+2. `/Users/macbookair/Desktop/Combined-data-set/not-deer`: Contains images of objects that are not deer labeled as "not-deer1", "not-deer2", etc.
+
+## Model Training
+
+![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+The deep learning model is trained using TensorFlow and Keras. The images are preprocessed by resizing them to (224, 224) and normalizing the pixel values to the range [0, 1]. The model is compiled with the Adam optimizer and binary cross-entropy loss since it's a binary classification problem.
+
+To train the model, run the script `neural-network.py`. The model will be saved as `deer_identifier_model.h5` after training.
+
+
+## Model Performance
+
+![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+The trained model achieved an accuracy of approximately 90% on the test dataset, which indicates its ability to classify deer and non-deer images effectively.
+
+
+## GUI Application
+
+![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+To use the model for real-time predictions, run the script `deer_gui.py`. This will launch an interactive GUI application. You can input an image filepath into the provided text box, and the model will make a prediction about whether the image contains a deer or not. The result will be displayed in the application with the corresponding confidence level.
+
+## Improvements
+
+Although the model has achieved a decent accuracy, there is always room for improvement. Here are some suggestions to enhance the model's performance:
+
+1. **Data Augmentation**: To prevent overfitting and enhance generalization, consider applying data augmentation techniques like rotation, flipping, and scaling to the training dataset.
+
+2. **Hyperparameter Tuning**: Experiment with different hyperparameters like learning rate, batch size, and number of epochs to optimize the model's performance.
+
+3. **Transfer Learning**: Instead of using MobileNetV2 as the base model, try other pre-trained architectures like VGG, ResNet, or Inception for transfer learning and feature extraction.
+
+4. **Data Balancing**: The dataset contains an equal number of deer and non-deer images. If the real-world distribution of classes is imbalanced, consider using techniques like oversampling or undersampling to balance the data.
+
+5. **Ensemble Learning**: Combine multiple models (e.g., SVM, Random Forest) with the deep learning model using ensemble learning techniques to improve overall accuracy.
+
+## Conclusion
+
+This Deer Identifier project demonstrates how to build, train, and deploy a deep learning model for image classification. With further improvements and optimizations, the model can be made more accurate and robust for real-world applications.
+
+Feel free to explore the code and make enhancements to the project. Happy coding! 🦌📸
+
+
 
 
 ## Credit-Classification-Project
