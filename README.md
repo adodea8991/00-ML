@@ -125,7 +125,7 @@ In this project, we built a Fruit Identifier using machine learning algorithms. 
 ### Initial SVM Model
 
 
-![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Initial SVM Results](https://github.com/adodea8991/00-ML/blob/main/Fruit-Identifier/SVM-simple-performance.png)
 
 
 The initial SVM model used the default settings and performed poorly with an accuracy of only 70%. After analyzing the data, we identified some key areas for improvement.
@@ -141,7 +141,7 @@ The initial SVM model used the default settings and performed poorly with an acc
 ### Enhanced SVM Model
 
 
-![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Improved SVM Results](https://github.com/adodea8991/00-ML/blob/main/Fruit-Identifier/SVM-advanced-performance.png)
 
 
 After implementing these improvements, the accuracy of the SVM model increased to 90%.
@@ -152,19 +152,19 @@ Next, we tried a Random Forest classifier, which is an ensemble learning method 
 
 ### 6 Trees in Random Forest
 
-![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Random Forest Results using 6 decision trees](https://github.com/adodea8991/00-ML/blob/main/Fruit-Identifier/Rnd-forest-6-trees.png)
 
 With 6 decision trees in the Random Forest, the accuracy achieved was 86%.
 
 ### 15 Trees in Random Forest
 
-![Training Histogram](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Random Forest Results using 15 decision trees](https://github.com/adodea8991/00-ML/blob/main/Fruit-Identifier/Rnd-forest-15-trees.png)
 
 By increasing the number of decision trees to 15, the accuracy improved to 89%.
 
 ### 21 Trees in Random Forest
 
-![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Random Forest Results using 21 decision trees](https://github.com/adodea8991/00-ML/blob/main/Fruit-Identifier/Rnd-forest-21-trees.png)
 
 Finally, using 21 decision trees in the Random Forest, the accuracy further increased to 90%.
 
