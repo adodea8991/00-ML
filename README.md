@@ -196,6 +196,64 @@ Feel free to explore the code and data in this repository and experiment with di
 
 
 
+# K-Nearest Neighbors (KNN) Project - Fake Bills Classification and Regression
+
+In this project, we implemented the K-Nearest Neighbors (KNN) algorithm for both classification and regression tasks using a dataset containing information about fake bills. We'll go through each step of the project and discuss the results we obtained.
+
+## Data Preprocessing and Initial Data Visualization
+
+![Missing data](https://github.com/adodea8991/00-ML/blob/main/Fake-money/Missing-data.png)
+![Scatterplot of true & fake bills](https://github.com/adodea8991/00-ML/blob/main/Fake-money/True-vs-Fake-scatter.png)
+
+The dataset `fake_bills.csv` contains features such as diagonal, height_left, height_right, margin_low, margin_up, and length. The target variable is `is_genuine`, which indicates whether the bill is genuine (True) or fake (False).
+
+Before applying KNN, we performed data preprocessing steps to handle missing values using a mean imputer from `sklearn.impute.SimpleImputer`. We then split the data into training and testing sets using a 70-30 split ratio.
+
+To understand the data distribution and relationships between features, we created two plots: a heatmap and a scatter plot. The heatmap provided insights into the correlation between features, while the scatter plot allowed us to visualize the data points.
+
+## K-Nearest Neighbors (KNN) Algorithm
+
+### Classification Task
+
+![Classification results](https://github.com/adodea8991/00-ML/blob/main/Fake-money/Classification-results.png)
+
+
+For the classification task, we used `KNeighborsClassifier` from `sklearn.neighbors` to build the KNN model. The hyperparameter `n_neighbors` was set to 5, which means that the algorithm considers the 5 nearest neighbors when making predictions.
+
+### Regression Task
+
+![Regression Results](https://github.com/adodea8991/00-ML/blob/Fake-money/Knn-regression.png)
+
+For the regression task, we used `KNeighborsRegressor` from `sklearn.neighbors` to build the KNN model. Similarly, we set `n_neighbors` to 5 for this regression model.
+
+## Model Visualizations
+
+For both the classification and regression tasks, we visualized the models using a GUI window created with `tkinter`. The GUI displayed the classification report and regression Mean Squared Error (MSE) after training and testing the models.
+
+## Results and Analysis
+
+![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Fake-money/Accuracy.png)
+
+### Classification Results
+
+The classification KNN model achieved impressive performance with an accuracy of 0.99 on the test set. The precision, recall, and F1-score for both classes (True and False) were also high, indicating the model's ability to correctly classify genuine and fake bills. The macro and weighted averages were close to 0.99, indicating that the model's performance is balanced across classes.
+
+### Regression Results
+
+For the regression task, the KNN model achieved a Mean Squared Error (MSE) of 0.102. The lower the MSE value, the better the model's predictions match the actual target values. Therefore, the KNN regression model performed well in predicting the diagonal values of the fake bills.
+
+## Conclusion
+
+In this project, we successfully implemented the K-Nearest Neighbors (KNN) algorithm for both classification and regression tasks on a dataset containing information about fake bills. The models achieved high accuracy and performed well in predicting the target variables.
+
+The KNN algorithm is versatile and can be used for both classification and regression tasks. However, it's essential to choose an appropriate value for `n_neighbors`, as a small `n_neighbors` may lead to noisy predictions, while a large `n_neighbors` might oversmooth the decision boundaries or regressions. Additionally, KNN is a non-parametric algorithm and can be computationally expensive for large datasets.
+
+Future steps for improvement could involve exploring other machine learning algorithms, optimizing hyperparameters, and conducting feature engineering to further enhance the model's performance. Additionally, analyzing the importance of different features and their impact on the model's predictions can provide valuable insights for model interpretation and business decision-making.
+
+
+
+
+
 
 
 
