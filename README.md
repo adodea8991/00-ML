@@ -552,7 +552,7 @@ In this project, we aimed to build a spam filter using three different machine l
 We used a dataset named `emails.csv` for training and testing the spam filter. This dataset contains various features extracted from emails, such as word frequencies, subject line, and other attributes. The target variable, "Prediction," indicates whether an email is spam (1) or not spam (0).
 
 
-![Word Occurance Visualisation](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Word Occurance Visualisation](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/Word-occurance.png)
 
 
 ## Methodology
@@ -564,24 +564,24 @@ The first step in building the spam filter involved data preprocessing. We dropp
 ### Decision Tree
 
 
-![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
-![Decision Tree Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/Decision-Tree-Accuracy.png)
+![Decision Tree Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/Decision-Tree-Confusion-Matrix.png)
 
 The Decision Tree algorithm creates a tree-like model that makes decisions based on feature values. After training the model, we achieved an accuracy of approximately 93%. The confusion matrix indicates that there were 698 true negatives, 41 false positives, 36 false negatives, and 260 true positives.
 
 ### K-Nearest Neighbors (KNN)
 
 
-![KNN Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
-![KNN Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![KNN Accuracy](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/KNN-Accuracy.png)
+![KNN Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/KNN-Confusion-Matrix.png)
 
 KNN is a classification algorithm that assigns a label to a data point based on the majority class of its k-nearest neighbors. After training the KNN model, we achieved an accuracy of around 86%. The confusion matrix shows 645 true negatives, 94 false positives, 48 false negatives, and 248 true positives.
 
 ### Logistic Regression
 
 
-![Logistic Regression Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
-![Logistic Regression Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Logistic Regression Accuracy](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/Logistic-Regression-Accuracy.png)
+![Logistic Regression Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/Logistic-Regression-Confusion-Matrix.png)
 
 Logistic Regression is a linear model used for binary classification. It calculates the probability of a sample belonging to a specific class. The Logistic Regression model yielded the highest accuracy of approximately 97%. The confusion matrix displays 718 true negatives, 21 false positives, 12 false negatives, and 284 true positives.
 
