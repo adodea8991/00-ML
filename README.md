@@ -4,7 +4,7 @@
 
 1. [Deer Identifier with Neural Netwroks](dDeer-identifier-with-neural-netwroks)
 2. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
-3. [Fruit-Freshness-Identifier-Project-via-SVM-and-Random-Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
+3. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
 4. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
 5. [Book Price Prediction Model](#book-price-prediction-model)
 6. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
@@ -692,6 +692,10 @@ We used a dataset named `emails.csv` for training and testing the spam filter. T
 
 The first step in building the spam filter involved data preprocessing. We dropped irrelevant columns and performed one-hot encoding on the categorical features, converting them into numerical form for compatibility with the machine learning algorithms.
 
+
+**Feature Engineering:**
+To prepare the data for training, we performed feature engineering, including one-hot encoding categorical variables and scaling numerical features. This step was crucial in ensuring that the Random Forest algorithm could effectively learn from the data and make accurate predictions.
+
 ### Decision Tree
 
 
@@ -716,19 +720,23 @@ KNN is a classification algorithm that assigns a label to a data point based on 
 
 Logistic Regression is a linear model used for binary classification. It calculates the probability of a sample belonging to a specific class. The Logistic Regression model yielded the highest accuracy of approximately 97%. The confusion matrix displays 718 true negatives, 21 false positives, 12 false negatives, and 284 true positives.
 
-## Performance Comparison
-
-Overall, each algorithm performed well in classifying spam and non-spam emails. The Logistic Regression model outperformed the other two algorithms in terms of accuracy, achieving a high accuracy of 97%. This suggests that logistic regression was more effective in capturing the underlying patterns in the data.
-
-The confusion matrices provide insights into the model's performance regarding true positives, true negatives, false positives, and false negatives. The Logistic Regression model showed the least number of misclassifications, with fewer false positives and false negatives compared to the Decision Tree and KNN models.
-
-## Conclusion
-
-The spam filter project demonstrated the effectiveness of different machine learning algorithms in identifying spam emails. Logistic Regression emerged as the most accurate classifier among Decision Tree, KNN, and Logistic Regression. However, the choice of the best algorithm depends on the specific requirements of the application and the nature of the data.
-
-To use the spam filter in real-world scenarios, further evaluation and fine-tuning are essential. Additionally, the use of larger and more diverse datasets can enhance the performance and generalizability of the models.
 
 
+### Random Forest
+We then implemented the Random Forest classifier using the scikit-learn library in Python. The Random Forest algorithm works by creating an ensemble of decision trees, each trained on a random subset of the data. The predictions of all decision trees are combined to produce the final output. This random forest create 100 random decision trees.
+
+![Random forest 100 decision trees](https://github.com/adodea8991/00-ML/blob/main/Spam-Filter/Rnd-forest-performance.png)
+
+
+**Model Comparison:**
+To determine the effectiveness of the Random Forest model, we compared its performance with other machine learning models like Logistic Regression, Support Vector Machine, and Naive Bayes. We used common evaluation metrics such as accuracy, precision, recall, and F1-score to assess the models' performance.
+
+
+**Results:**
+The Random Forest model demonstrated superior performance compared to the other models. Its ability to handle complex relationships within the data and reduce overfitting contributed to its success in accurately classifying emails as spam or not spam. The evaluation metrics consistently showed higher values for the Random Forest model, indicating better overall performance.
+
+**Conclusion:**
+In conclusion, the Random Forest algorithm proved to be an effective solution for the spam classification task. By leveraging the collective knowledge of multiple decision trees, the model demonstrated robustness and generalization on unseen data. As the size of the dataset grows, the Random Forest approach is expected to scale well and maintain its superior performance.
 
 
 
