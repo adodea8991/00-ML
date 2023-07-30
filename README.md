@@ -4,14 +4,14 @@
 
 1. [Deer Identifier with Neural Netwroks](dDeer-identifier-with-neural-netwroks)
 2. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
-2. [Fruit-Freshness-Identifier-Project-via-SVM-and-Random-Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
-3. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-4. [Book Price Prediction Model](#book-price-prediction-model)
-5. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
-6. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
-7. [Titanic Data Analysis Project](#titanic-data-analysis-project)
-8. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
-9. [Housing Linear Model](#housing-linear-model)
+3. [Fruit-Freshness-Identifier-Project-via-SVM-and-Random-Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
+4. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+5. [Book Price Prediction Model](#book-price-prediction-model)
+6. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
+7. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+8. [Titanic Data Analysis Project](#titanic-data-analysis-project)
+9. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
+10. [Housing Linear Model](#housing-linear-model)
 
 
 
