@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-1. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
+1. [Deer Identifier with Neural Netwroks](dDeer-identifier-with-neural-netwroks)
+2. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
 2. [Fruit-Freshness-Identifier-Project-via-SVM-and-Random-Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
 3. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
 4. [Book Price Prediction Model](#book-price-prediction-model)
@@ -14,20 +15,20 @@
 
 
 
-# Deer Identifier with Neural Netwroks
+## Deer-Identifier-with-Neural-Netwroks
 
 ![Deer Identifier program](https://github.com/adodea8991/00-ML/blob/main/Deer-identifier/GUI.png)
 
 This project aims to develop a deep learning model to identify whether an image contains a deer or not. The model is trained on a dataset of deer images and non-deer images and uses the powerful MobileNetV2 architecture for image classification. The model is then deployed as an interactive GUI application where users can input an image filepath to get a prediction of whether the image contains a deer or not.
 
-## Dataset
+### Dataset
 
 The dataset used for training and testing the model is organized into two folders:
 
 1. `/Users/macbookair/Desktop/Combined-data-set/deer`: Contains images of deer labeled as "deer1", "deer2", etc.
 2. `/Users/macbookair/Desktop/Combined-data-set/not-deer`: Contains images of objects that are not deer labeled as "not-deer1", "not-deer2", etc.
 
-## Model Training
+### Model Training
 
 ![The model is trained for 20 epochs](https://github.com/adodea8991/00-ML/blob/main/Deer-identifier/Training.png)
 
@@ -36,19 +37,19 @@ The deep learning model is trained using TensorFlow and Keras. The images are pr
 To train the model, run the script `neural-network.py`. The model will be saved as `deer_identifier_model.h5` after training.
 
 
-## Model Performance
+### Model Performance
 
 
 The trained model achieved an accuracy of approximately 90% on the test dataset, which indicates its ability to classify deer and non-deer images effectively.
 
 
-## GUI Application
+### GUI Application
 
 ![Deer Identifier program](https://github.com/adodea8991/00-ML/blob/main/Deer-identifier/GUI.png)
 
 To use the model for real-time predictions, run the script `deer_gui.py`. This will launch an interactive GUI application. You can input an image filepath into the provided text box, and the model will make a prediction about whether the image contains a deer or not. The result will be displayed in the application with the corresponding confidence level.
 
-## Improvements
+### Improvements
 
 Although the model has achieved a decent accuracy, there is always room for improvement. Here are some suggestions to enhance the model's performance:
 
@@ -62,11 +63,11 @@ Although the model has achieved a decent accuracy, there is always room for impr
 
 5. **Ensemble Learning**: Combine multiple models (e.g., SVM, Random Forest) with the deep learning model using ensemble learning techniques to improve overall accuracy.
 
-## Conclusion
+### Conclusion
 
 This Deer Identifier project demonstrates how to build, train, and deploy a deep learning model for image classification. With further improvements and optimizations, the model can be made more accurate and robust for real-world applications.
 
-Feel free to explore the code and make enhancements to the project. Happy coding! 🦌📸
+Feel free to explore the code and make enhancements to the project. There's also the model attached. Happy coding! 🦌📸
 
 
 
