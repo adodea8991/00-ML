@@ -8,7 +8,8 @@
 4. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
 5. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
 6. [Titanic Data Analysis Project](#titanic-data-analysis-project)
-7. [Housing Linear Model](#housing-linear-model)
+7. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
+8. [Housing Linear Model](#housing-linear-model)
 
 
 
@@ -534,6 +535,67 @@ Next Steps:
 3. **Feature Engineering:** Additional feature engineering techniques might be applied to extract more valuable information from the existing features.
 4. **Data Scaling:** We can investigate the impact of feature scaling on model performance.
 5. **Model Evaluation:** It is essential to evaluate the model's performance on a separate validation set or through cross-validation to ensure it generalizes well to new, unseen data.
+
+
+
+
+
+
+# Spam-Filter-Multiple-Algorithms
+
+## Introduction
+
+In this project, we aimed to build a spam filter using three different machine learning algorithms: Decision Tree, K-Nearest Neighbors (KNN), and Logistic Regression. The objective of the spam filter is to classify emails as either "spam" or "not spam" based on their content and other relevant features.
+
+## Dataset
+
+We used a dataset named `emails.csv` for training and testing the spam filter. This dataset contains various features extracted from emails, such as word frequencies, subject line, and other attributes. The target variable, "Prediction," indicates whether an email is spam (1) or not spam (0).
+
+
+![Word Occurance Visualisation](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+
+## Methodology
+
+### Data Preprocessing
+
+The first step in building the spam filter involved data preprocessing. We dropped irrelevant columns and performed one-hot encoding on the categorical features, converting them into numerical form for compatibility with the machine learning algorithms.
+
+### Decision Tree
+
+
+![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Decision Tree Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+The Decision Tree algorithm creates a tree-like model that makes decisions based on feature values. After training the model, we achieved an accuracy of approximately 93%. The confusion matrix indicates that there were 698 true negatives, 41 false positives, 36 false negatives, and 260 true positives.
+
+### K-Nearest Neighbors (KNN)
+
+
+![KNN Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![KNN Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+KNN is a classification algorithm that assigns a label to a data point based on the majority class of its k-nearest neighbors. After training the KNN model, we achieved an accuracy of around 86%. The confusion matrix shows 645 true negatives, 94 false positives, 48 false negatives, and 248 true positives.
+
+### Logistic Regression
+
+
+![Logistic Regression Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+![Logistic Regression Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+Logistic Regression is a linear model used for binary classification. It calculates the probability of a sample belonging to a specific class. The Logistic Regression model yielded the highest accuracy of approximately 97%. The confusion matrix displays 718 true negatives, 21 false positives, 12 false negatives, and 284 true positives.
+
+## Performance Comparison
+
+Overall, each algorithm performed well in classifying spam and non-spam emails. The Logistic Regression model outperformed the other two algorithms in terms of accuracy, achieving a high accuracy of 97%. This suggests that logistic regression was more effective in capturing the underlying patterns in the data.
+
+The confusion matrices provide insights into the model's performance regarding true positives, true negatives, false positives, and false negatives. The Logistic Regression model showed the least number of misclassifications, with fewer false positives and false negatives compared to the Decision Tree and KNN models.
+
+## Conclusion
+
+The spam filter project demonstrated the effectiveness of different machine learning algorithms in identifying spam emails. Logistic Regression emerged as the most accurate classifier among Decision Tree, KNN, and Logistic Regression. However, the choice of the best algorithm depends on the specific requirements of the application and the nature of the data.
+
+To use the spam filter in real-world scenarios, further evaluation and fine-tuning are essential. Additionally, the use of larger and more diverse datasets can enhance the performance and generalizability of the models.
 
 
 
