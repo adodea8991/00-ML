@@ -3,13 +3,14 @@
 ## Table of Contents
 
 1. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
-2. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-3. [Book Price Prediction Model](#book-price-prediction-model)
-4. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
-5. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
-6. [Titanic Data Analysis Project](#titanic-data-analysis-project)
-7. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
-8. [Housing Linear Model](#housing-linear-model)
+2. [Fruit-Freshness-Identifier-Project-via-SVM-and-Random-Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
+3. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+4. [Book Price Prediction Model](#book-price-prediction-model)
+5. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
+6. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+7. [Titanic Data Analysis Project](#titanic-data-analysis-project)
+8. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
+9. [Housing Linear Model](#housing-linear-model)
 
 
 
@@ -109,6 +110,80 @@ This project demonstrates the importance of data pre-processing and model evalua
 - numpy
 - matplotlib
 - scikit-learn
+
+
+
+
+
+
+## Fruit-Freshness-Identifier-Project-via-SVM-and-Random-Forest
+
+In this project, we built a Fruit Identifier using machine learning algorithms. We started with a simple SVM implementation, but the initial accuracy was only 70%. However, through various improvements and experimentation, we were able to significantly boost the accuracy of the model.
+
+## SVM Implementation
+
+### Initial SVM Model
+
+
+![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+
+The initial SVM model used the default settings and performed poorly with an accuracy of only 70%. After analyzing the data, we identified some key areas for improvement.
+
+### Improvements Made
+
+1. **Feature Scaling:** We noticed that the features in the dataset had different scales. To address this, we applied feature scaling to bring all features to a similar scale. This step is important for SVM to work effectively.
+
+2. **Handling Missing Data:** Fortunately, the dataset did not have any missing data, so we didn't need to perform any imputation or data filling.
+
+3. **Train-Test Split:** We split the data into a training set (75%) and a testing set (25%) to evaluate the model's performance.
+
+### Enhanced SVM Model
+
+
+![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+
+After implementing these improvements, the accuracy of the SVM model increased to 90%.
+
+## Random Forest Implementation
+
+Next, we tried a Random Forest classifier, which is an ensemble learning method based on decision trees. We experimented with different numbers of decision trees to observe their impact on model performance.
+
+### 6 Trees in Random Forest
+
+![Training Heatmap](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+With 6 decision trees in the Random Forest, the accuracy achieved was 86%.
+
+### 15 Trees in Random Forest
+
+![Training Histogram](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+By increasing the number of decision trees to 15, the accuracy improved to 89%.
+
+### 21 Trees in Random Forest
+
+![Training Boxplot](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
+
+Finally, using 21 decision trees in the Random Forest, the accuracy further increased to 90%.
+
+## Conclusion and Learnings
+
+Through this project, we learned several valuable lessons:
+
+1. **Feature Scaling:** Properly scaling features can significantly impact the performance of certain algorithms like SVM. Feature scaling ensures that all features contribute equally to the learning process.
+
+2. **Model Selection:** Different algorithms perform differently on various datasets. Initially, SVM did not perform well on this particular dataset, but Random Forest proved to be a better choice.
+
+3. **Ensemble Methods:** Random Forest is an ensemble learning technique that combines multiple decision trees to improve overall performance. It often outperforms a single decision tree.
+
+4. **Model Evaluation:** Regularly evaluating the model's performance using metrics like accuracy and confusion matrix helps us understand the model's strengths and weaknesses.
+
+5. **Hyperparameter Tuning:** Adjusting hyperparameters, such as the number of trees in the Random Forest, can impact the model's accuracy. Finding the right balance is crucial.
+
+Overall, the Fruit Identifier project demonstrates the importance of data preprocessing, model selection, and hyperparameter tuning in achieving a high-performing machine learning model. The Random Forest classifier proved to be the most effective for this particular task, providing a 90% accuracy in fruit identification.
+
 
 
 
