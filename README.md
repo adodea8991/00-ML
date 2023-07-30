@@ -24,6 +24,38 @@ The correlation heatmap allowed us to understand which features are highly corre
 ![Parameter Heatmap](https://github.com/adodea8991/00-ML/blob/main/Cancer/Param-Heatmap.png)
 
 
+
+
+**Implementation:**
+
+The implementation was done in Python using the NumPy library for numerical computations, pandas for data analysis, and scikit-learn for dataset loading and train-test splitting. We performed the following steps:
+
+1. Load the dataset and preprocess it by standardizing the features using `StandardScaler`.
+2. Add a bias term to the features matrix to account for the intercept term in logistic regression.
+3. Split the data into training and test sets using `train_test_split`.
+4. Define the logistic function (sigmoid function), cost function with L2 regularization, and gradient descent algorithm for logistic regression.
+5. Train the logistic regression model on the training data using gradient descent.
+6. Make predictions on the test set and evaluate the model's accuracy.
+7. Compute and print the confusion matrix to understand the model's performance.
+
+**Reasoning:**
+
+We chose to implement logistic regression for this classification task because it is a simple and effective algorithm for binary classification problems. Logistic regression works well when the data is linearly separable and provides interpretable probabilities for class predictions.
+
+Moreover, we incorporated L2 regularization (ridge regularization) into the cost function to prevent overfitting and improve the model's generalization ability.
+
+**Results and Learnings:**
+
+After implementing the logistic regression model, we achieved an accuracy of approximately 99%, which indicates that the model is performing well on the test set. The confusion matrix revealed that the model made very few misclassifications. It correctly predicted 107 malignant tumors (true positives) and 62 benign tumors (true negatives). There was only one false positive and one false negative, indicating a high level of precision and recall.
+
+
+![Confusion Matrix](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+![Cost Function](https://github.com/adodea8991/00-ML/blob/main/Cancer/Model-score.png)
+
+
+
+
+
 ### Model Selection
 
 Two machine learning models were chosen for this project:
@@ -91,7 +123,7 @@ weighted avg       0.97      0.97      0.96       143
 
 1. **Feature Engineering:** Feature engineering can play a crucial role in improving model performance. Exploring new features and selecting relevant ones can lead to better predictive models.
 
-2. **Hyperparameter Tuning:** Fine-tuning model hyperparameters can help optimize the models for better accuracy and generalization.
+2. **Hyperparameter Tuning:** We can perform hyperparameter tuning to find the best regularization parameter `lambda_reg` and learning rate `alpha`, which might improve the model's performance further.
 
 3. **Ensemble Techniques:** Ensemble methods like boosting and bagging can be employed to combine multiple models for even better predictive performance.
 
@@ -100,6 +132,11 @@ weighted avg       0.97      0.97      0.96       143
 5. **Visualizations:** Further exploring visualization techniques can provide valuable insights into the dataset and model decisions.
 
 6. **Interpretability:** Considering the critical nature of cancer diagnosis, models with higher interpretability can be preferred to gain insights into the decision-making process.
+
+7. **Cross-Validation:** Implementing k-fold cross-validation to get a more robust estimate of the model's performance and reduce the variance of the results.
+
+8. **Other Regularization Techniques:** Experimenting with other regularization techniques like L1 regularization (Lasso) and Elastic Net regularization to compare their impact on the model's performance.
+
 
 ### Conclusion
 
