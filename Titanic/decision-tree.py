@@ -1,75 +1,85 @@
 import pandas as pd
 import numpy as np
-import matplotlib
-matplotlib.use('agg')
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor, plot_tree
-from sklearn.metrics import accuracy_score, mean_squared_error, confusion_matrix
-import tkinter as tk
-from tkinter import messagebox
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from sklearn.metrics import accuracy_score, mean_squared_error
+from sklearn.tree import plot_tree
 
-# Load the dataset
-df = pd.read_csv("train.csv")
+# Load data
+data = pd.read_csv('train.csv')
 
-# Preprocessing
-# Drop irrelevant features and any rows with missing values
-df = df.drop(['Name', 'Ticket', 'Cabin'], axis=1)
-df = df.dropna()
+# Drop rows with missing values in 'Age' column
+data = data.dropna(subset=['Age'])
 
-# Convert categorical features into numerical using one-hot encoding
-categorical_features = ['Sex', 'Embarked']
-df = pd.get_dummies(df, columns=categorical_features, drop_first=True)
+# Select features and target for classification
+X_class = data[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked']]
+y_class = data['Survived']
 
-# For the classification decision tree
-X_class = df[['Pclass', 'Sex_male', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked_Q', 'Embarked_S']]
-y_class = df['Survived']
+# Convert categorical variables to numeric using one-hot encoding
+X_class = pd.get_dummies(X_class, drop_first=True)
+
+# Split data into training and testing sets for classification
 X_class_train, X_class_test, y_class_train, y_class_test = train_test_split(X_class, y_class, test_size=0.2, random_state=42)
 
-clf = DecisionTreeClassifier(random_state=42)
+# Train the classification decision tree
+clf = DecisionTreeClassifier(criterion='gini')
 clf.fit(X_class_train, y_class_train)
 
-# Plotting the classification decision tree
+# Predict on the test set
+y_class_pred = clf.predict(X_class_test)
+
+# Calculate classification accuracy
+class_accuracy = accuracy_score(y_class_test, y_class_pred)
+print(f"Classification Decision Tree Accuracy: {class_accuracy:.2f}")
+
+# Plot the classification decision tree
 plt.figure(figsize=(15, 10))
 plot_tree(clf, filled=True, feature_names=X_class.columns.tolist(), class_names=['Not Survived', 'Survived'])
-plt.title("Classification Decision Tree", fontsize=16)
-plt.savefig("classification_tree.png")
+plt.title("Classification Decision Tree")
+plt.show()
 
-# Calculating the accuracy on the test set
-y_class_pred = clf.predict(X_class_test)
-accuracy_class = accuracy_score(y_class_test, y_class_pred)
-print(f"Classification Decision Tree Accuracy: {accuracy_class:.2f}")
+# Select features and target for regression
+X_reg = data[['Pclass', 'Sex', 'SibSp', 'Parch', 'Fare', 'Embarked']]
+y_reg = data['Age']
 
-# Confusion matrix for the classification decision tree
-conf_matrix = confusion_matrix(y_class_test, y_class_pred)
-print("Confusion Matrix:")
-print(conf_matrix)
+# Convert categorical variables to numeric using one-hot encoding
+X_reg = pd.get_dummies(X_reg, drop_first=True)
 
-# For the regression decision tree
-X_reg = df[['Pclass', 'Sex_male', 'SibSp', 'Parch', 'Fare', 'Embarked_Q', 'Embarked_S']]
-y_reg = df['Age']
+# Split data into training and testing sets for regression
 X_reg_train, X_reg_test, y_reg_train, y_reg_test = train_test_split(X_reg, y_reg, test_size=0.2, random_state=42)
 
-reg = DecisionTreeRegressor(random_state=42)
+# Train the regression decision tree
+reg = DecisionTreeRegressor(criterion='friedman_mse')
 reg.fit(X_reg_train, y_reg_train)
 
-# Plotting the regression decision tree
+# Predict on the test set
+y_reg_pred = reg.predict(X_reg_test)
+
+# Calculate mean squared error for regression
+reg_mse = mean_squared_error(y_reg_test, y_reg_pred)
+print(f"Regression Decision Tree Mean Squared Error: {reg_mse:.2f}")
+
+# Plot the regression decision tree
 plt.figure(figsize=(15, 10))
 plot_tree(reg, filled=True, feature_names=X_reg.columns.tolist())
-plt.title("Regression Decision Tree", fontsize=16)
-plt.savefig("regression_tree.png")
+plt.title("Regression Decision Tree")
+plt.show()
 
-# Calculating the mean squared error on the test set
-y_reg_pred = reg.predict(X_reg_test)
-mse = mean_squared_error(y_reg_test, y_reg_pred)
-print(f"Regression Decision Tree Mean Squared Error: {mse:.2f}")
+# Visualization of impurity measures
 
-# GUI performance output
-root = tk.Tk()
-root.withdraw()
+# Generate class proportions from 0 to 1
+p_values = np.linspace(0, 1, num=100)
+gini_values = 1 - (p_values**2 + (1-p_values)**2)
+entropy_values = - (p_values * np.log2(p_values) + (1-p_values) * np.log2(1-p_values))
 
-msg = f"Classification Decision Tree Accuracy: {accuracy_class:.2f}\nRegression Decision Tree Mean Squared Error: {mse:.2f}"
-messagebox.showinfo("Performance Output", msg)
-
-root.mainloop()
+# Plot impurity measures
+plt.figure(figsize=(10, 6))
+plt.plot(p_values, gini_values, label='Gini Index')
+plt.plot(p_values, entropy_values, label='Entropy')
+plt.xlabel('Proportion of Class 1')
+plt.ylabel('Impurity')
+plt.title('Impurity Measures Comparison')
+plt.legend()
+plt.grid()
+plt.show()

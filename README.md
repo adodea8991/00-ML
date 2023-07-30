@@ -346,6 +346,11 @@ For classification tasks, decision trees partition the feature space into region
 
 ![Decision Tree Accuracy](https://github.com/adodea8991/00-ML/blob/main/Titanic/Accuracy.png)
 
+7. Impurity Measures Comparison
+The visualization of the impurity measures (Gini index and entropy) helps us understand their behavior when splitting data points. The comparison plot shows that the Gini index and entropy are similar in shape, but the Gini index tends to increase slightly more steeply when the proportion of class 1 is close to 0 or 1. This suggests that the Gini index is slightly more sensitive to class imbalance, while entropy provides a more balanced impurity measure regardless of class distribution.
+
+![Impurity Comparison Entropy vs Gini](https://github.com/adodea8991/00-ML/blob/main/Titanic/Impurity-comparison.png)
+
 
 ## Conclusion
 
