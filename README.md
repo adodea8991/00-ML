@@ -2,12 +2,12 @@
 
 ## Table of Contents
 
-1. [Cancer Diagnosis using Machine Learning](#Cancer-Diagnosis-Using-Machine-Learning)
-2. [Book Project](#Book-Project)
-3. [K-Nearest Neighbour Fake Bills Classification and Regression](#KNN-Fake-Bills-Classification-and-Regression)
-4. [McDonald's Rating Prediction Project](#McDonalds-Rating-Prediction-Project)
-5. [Titanic Data Analysis Project](#Titanic-Data-Analysis-Project)
-6. [Housing Linear Model](#Housing-Linear-Model)
+1. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+2. [Book Project](#book-project)
+3. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
+4. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+5. [Titanic Data Analysis Project](#titanic-data-analysis-project)
+6. [Housing Linear Model](#housing-linear-model)
 
 
 
@@ -160,7 +160,7 @@ This project demonstrates the potential of machine learning in cancer diagnosis 
 
 
 
-**Book-Project**
+## Book-Project
 
 This repository contains the code and data for the Book project, where we analyze and build models to predict book prices and book_depository_stars based on various features.
 
