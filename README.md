@@ -5,12 +5,12 @@
 1. [Deer Identifier with Neural Netwroks](#deer-identifier-with-neural-netwroks)
 2. [Sentiment Analysis Software with GUI Interface](#sentiment-analysis-software-with-gui-interface)
 3. [Netflix Rating Classifier and NER](#netflix-genre-prediction-and-ner-project)
-4. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
-5. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
-6. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-7. [Book Price Prediction Model](#book-price-prediction-model)
-8. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
-9. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+4. [McDonalds Chatbot and Rating Prediction](#mcdonalds-chatbot-and-rating-prediction)
+5. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
+6. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
+7. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+8. [Book Price Prediction Model](#book-price-prediction-model)
+9. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
 10. [Titanic Data Analysis Project](#titanic-data-analysis-project)
 11. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
 12. [Housing Linear Model](#housing-linear-model)
@@ -253,6 +253,112 @@ This project demonstrates how to use Named Entity Recognition (NER) to extract n
 
 
 
+
+
+
+
+
+## McDonalds-Chatbot-and-Rating-Prediction
+
+This repository contains the code and data for a McDonald's rating prediction project. The goal of the project is to predict the ratings of McDonald's stores based on various features such as store location, review content, and more.
+
+
+### Introduction
+
+The popularity of McDonald's makes it a significant player in the fast-food industry. Understanding customer feedback and predicting store ratings can provide valuable insights for improving customer satisfaction and business strategies. In this project, we aim to analyze McDonald's customer reviews, visualize the data, and build a predictive model to forecast store ratings.
+
+### Data
+
+The data used in this project is collected from various sources, including customer reviews, store locations, and ratings. The dataset includes features like reviewer ID, store name, category, store address, latitude, longitude, review content, rating count, review time, review, and rating.
+
+### Data Cleaning
+
+Before conducting any analysis or modeling, the data must be cleaned and preprocessed. The data cleaning process involves handling missing values, removing irrelevant or redundant features, and transforming data into a suitable format for analysis. Additionally, we dealt with encoding issues and removed any invalid characters from the review content column.
+
+### Data Visualization
+
+### Histogram of Ratings
+
+A histogram is plotted to visualize the distribution of McDonald's ratings. This helps us understand the overall distribution of ratings given by customers.
+
+![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
+
+
+### Bar Plot of Average Ratings by Store Address
+
+A bar plot is generated to show the average ratings for each store address. This visualization helps us identify any variations in ratings based on different store locations.
+
+![Average rating by store](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Avg-rating-store.png)
+
+
+### Clustering
+
+In addition to the visualizations mentioned above, we also performed clustering analysis on the dataset. The clustering algorithm groups similar McDonald's restaurants based on certain features such as latitude, longitude, and review-related metrics.
+
+![Store Rating Clustering](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Review-placements.png)
+
+
+
+
+### McDonald's Chatbot - Review Search Feature**
+![Store Rating Clustering](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Review-bot.png)
+
+
+### Overview
+
+The McDonald's Chatbot is an interactive conversational bot designed to assist customers with various inquiries related to McDonald's stores, services, and offerings. Recently, a new feature has been added to the chatbot that allows users to search for McDonald's stores based on their reviews. The chatbot processes user input, which could be a review term or a related phrase, and then retrieves stores that have similar reviews in their database.
+
+### How it Works
+
+1. Data Collection: The chatbot uses a dataset named "clean_data.csv" containing information about McDonald's stores, including their names, addresses, reviews, and ratings.
+
+2. Preprocessing: To make the reviews suitable for comparison, the chatbot preprocesses the text using the Natural Language Toolkit (NLTK). The preprocessing involves converting text to lowercase, removing stop words, lemmatizing words, and ensuring that only alphabetic characters remain in the processed review.
+
+3. Search Algorithm: The chatbot employs the Term Frequency-Inverse Document Frequency (TF-IDF) vectorization technique to represent each review as a numerical vector. Then, it uses the cosine similarity metric to measure the similarity between the user's input review term and the reviews in the dataset. Stores with reviews that have a cosine similarity score above a pre-defined threshold are considered relevant.
+
+4. User Interaction: When a user inputs a review term or a related phrase, the chatbot processes the input and searches for relevant stores. If any relevant stores are found, the chatbot displays a formatted table with the store addresses, reviews, and ratings. If no matching stores are found, the chatbot informs the user accordingly.
+
+### Benefits
+
+- Enhanced User Experience: The review search feature provides customers with a personalized experience by recommending stores that match their preferences or concerns based on reviews.
+
+- Informed Decision-Making: Customers can make informed decisions about visiting McDonald's stores based on the feedback of other customers.
+
+- Increased Customer Engagement: The chatbot's ability to fetch relevant store information fosters increased engagement with users, leading to improved customer satisfaction.
+
+### Limitations
+
+- Dependency on User Input: The effectiveness of the review search feature depends on the clarity and relevance of the user's input review term. Ambiguous or non-specific review terms may yield inaccurate results.
+
+- Review Quality: The accuracy of the search results depends on the quality and quantity of reviews available in the dataset. Stores with fewer reviews may not be represented effectively.
+
+- Threshold Setting: The threshold for similarity can affect the number of relevant stores retrieved. An optimal threshold must be chosen to ensure relevant results without overwhelming the user with too many options.
+
+### Conclusion
+
+The McDonald's Chatbot's review search feature is a valuable addition to the existing project, providing users with a seamless way to discover McDonald's stores that match their review preferences. By leveraging NLP techniques and the TF-IDF algorithm, the chatbot delivers relevant and personalized results to enhance customer satisfaction and engagement.
+
+**Note:** The McDonald's Chatbot is an independent project and is not affiliated with McDonald's Corporation. The project is intended for educational and learning purposes only.
+
+
+
+### Modeling
+
+To predict store ratings, we experimented with the Support Vector Regression (SVR) model. SVR is a powerful regression technique that works well for both linear and non-linear relationships between features and target variables. We trained the SVR model on a subset of the data, using features such as latitude, longitude, review length, and review word count to predict store ratings.
+
+### Conclusion
+
+The McDonald's rating prediction project aims to explore customer reviews and store ratings to gain insights into customer satisfaction. We cleaned and visualized the data to better understand the distribution of ratings and the performance of stores across different locations. Finally, we used the Support Vector Regression model to predict store ratings based on relevant features.
+
+Please note that the project is an exploratory analysis and prediction, and further improvements can be made by incorporating additional data and experimenting with different machine learning models.
+
+
+
+
+
+
+
+
 ## Credit-Classification-Project
 
 This repository contains code for a machine learning project that aims to predict credit classification using various regression algorithms. The project involves data pre-processing, training and evaluating linear regression, decision tree, and K-Nearest Neighbors (KNN) regression models, and visualizing their performance.
@@ -420,6 +526,11 @@ Through this project, we learned several valuable lessons:
 5. **Hyperparameter Tuning:** Adjusting hyperparameters, such as the number of trees in the Random Forest, can impact the model's accuracy. Finding the right balance is crucial.
 
 Overall, the Fruit Identifier project demonstrates the importance of data preprocessing, model selection, and hyperparameter tuning in achieving a high-performing machine learning model. The Random Forest classifier proved to be the most effective for this particular task, providing a 90% accuracy in fruit identification.
+
+
+
+
+
 
 
 
@@ -687,60 +798,9 @@ Future steps for improvement could involve exploring other machine learning algo
 
 
 
-# McDonalds-Rating-Prediction-Project
-
-This repository contains the code and data for a McDonald's rating prediction project. The goal of the project is to predict the ratings of McDonald's stores based on various features such as store location, review content, and more.
 
 
-## Introduction
-
-The popularity of McDonald's makes it a significant player in the fast-food industry. Understanding customer feedback and predicting store ratings can provide valuable insights for improving customer satisfaction and business strategies. In this project, we aim to analyze McDonald's customer reviews, visualize the data, and build a predictive model to forecast store ratings.
-
-## Data
-
-The data used in this project is collected from various sources, including customer reviews, store locations, and ratings. The dataset includes features like reviewer ID, store name, category, store address, latitude, longitude, review content, rating count, review time, review, and rating.
-
-## Data Cleaning
-
-Before conducting any analysis or modeling, the data must be cleaned and preprocessed. The data cleaning process involves handling missing values, removing irrelevant or redundant features, and transforming data into a suitable format for analysis. Additionally, we dealt with encoding issues and removed any invalid characters from the review content column.
-
-## Data Visualization
-
-### Histogram of Ratings
-
-A histogram is plotted to visualize the distribution of McDonald's ratings. This helps us understand the overall distribution of ratings given by customers.
-
-![Histogram of Ratings](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Stores-histogram.png)
-
-
-### Bar Plot of Average Ratings by Store Address
-
-A bar plot is generated to show the average ratings for each store address. This visualization helps us identify any variations in ratings based on different store locations.
-
-![Average rating by store](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Avg-rating-store.png)
-
-
-### Clustering
-
-In addition to the visualizations mentioned above, we also performed clustering analysis on the dataset. The clustering algorithm groups similar McDonald's restaurants based on certain features such as latitude, longitude, and review-related metrics.
-
-![Store Rating Clustering](https://github.com/adodea8991/00-ML/blob/main/Mc-Donalds/Review-placements.png)
-
-
-## Modeling
-
-To predict store ratings, we experimented with the Support Vector Regression (SVR) model. SVR is a powerful regression technique that works well for both linear and non-linear relationships between features and target variables. We trained the SVR model on a subset of the data, using features such as latitude, longitude, review length, and review word count to predict store ratings.
-
-## Conclusion
-
-The McDonald's rating prediction project aims to explore customer reviews and store ratings to gain insights into customer satisfaction. We cleaned and visualized the data to better understand the distribution of ratings and the performance of stores across different locations. Finally, we used the Support Vector Regression model to predict store ratings based on relevant features.
-
-Please note that the project is an exploratory analysis and prediction, and further improvements can be made by incorporating additional data and experimenting with different machine learning models.
-
-
-
-
-# Titanic-Data-Analysis-Project
+## Titanic-Data-Analysis-Project
 
 ![Missing data](https://github.com/adodea8991/00-ML/blob/main/Titanic/Screenshot%202023-07-27%20at%2023.54.23.png)
 
