@@ -4,15 +4,16 @@
 
 1. [Deer Identifier with Neural Netwroks](#deer-identifier-with-neural-netwroks)
 2. [Sentiment Analysis Software with GUI Interface](#sentiment-analysis-software-with-gui-interface)
-3. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
-4. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
-5. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-6. [Book Price Prediction Model](#book-price-prediction-model)
-7. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
-8. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
-9. [Titanic Data Analysis Project](#titanic-data-analysis-project)
-10. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
-11. [Housing Linear Model](#housing-linear-model)
+3. [Netflix Rating Classifier](#netflix-genre-prediction-project)
+4. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
+5. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
+6. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+7. [Book Price Prediction Model](#book-price-prediction-model)
+8. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
+9. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+10. [Titanic Data Analysis Project](#titanic-data-analysis-project)
+11. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
+12. [Housing Linear Model](#housing-linear-model)
 
 
 
@@ -49,8 +50,6 @@ The trained model achieved an accuracy of approximately 90% on the test dataset,
 
 ### GUI Application
 
-![Deer Identifier program](https://github.com/adodea8991/00-ML/blob/main/Deer-identifier/GUI.png)
-
 To use the model for real-time predictions, run the script `deer_gui.py`. This will launch an interactive GUI application. You can input an image filepath into the provided text box, and the model will make a prediction about whether the image contains a deer or not. The result will be displayed in the application with the corresponding confidence level.
 
 ### Improvements
@@ -81,7 +80,7 @@ Feel free to explore the code and make enhancements to the project. There's also
 
 ### Overview
 
-![Sentiment Analysis GUI](https://github.com/adodea8991/00-ML/blob/main/emotions-nlp/emotion.py)
+![Sentiment Analysis GUI](https://github.com/adodea8991/00-ML/blob/main/Emotions-NLP/sentiment.png)
 
 
 This repository contains a sentiment analysis software with a Graphical User Interface (GUI) for performing sentiment analysis on input sentences. The software is designed to predict the emotional state (sentiment) associated with a given sentence. The GUI allows users to interact with the model easily, providing sentences for sentiment analysis and visualizing the results.
@@ -154,7 +153,7 @@ The GUI interface will open, allowing you to evaluate the model and perform real
 
 ## Netflix-Genre-Prediction-Project
 
-![Rating Accuracy Prediction V2](https://github.com/adodea8991/00-ML/blob/main/netflix-recomandation/confusion_matrix_v2.png)
+![Rating Accuracy Prediction V2](https://github.com/adodea8991/00-ML/blob/main/Netflix-Recomandation/Confusion_matrix_v2.png)
 
 This project aims to build a machine learning model that predicts the genre of movies and TV shows on Netflix based on their descriptions. We will use the "netflix_titles.csv" dataset, which contains information about the titles, descriptions, and ratings of various shows on Netflix.
 
@@ -203,7 +202,7 @@ python rating.py
 
 3. The script will display the confusion matrix, showing the model's accuracy in predicting the genre labels.
 
-![Rating Accuracy Prediction](https://github.com/adodea8991/00-ML/blob/main/netflix-recomandation/confusion_matrix.png)
+![Rating Accuracy Prediction](https://github.com/adodea8991/00-ML/blob/main/Netflix-Recomandation/Confusion_matrix.png)
 
 ### Results
 
