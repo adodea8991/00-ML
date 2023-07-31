@@ -2,16 +2,20 @@
 
 ## Table of Contents
 
-1. [Deer Identifier with Neural Netwroks](dDeer-identifier-with-neural-netwroks)
-2. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
-3. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
-4. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
-5. [Book Price Prediction Model](#book-price-prediction-model)
-6. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
-7. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
-8. [Titanic Data Analysis Project](#titanic-data-analysis-project)
-9. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
-10. [Housing Linear Model](#housing-linear-model)
+1. [Deer Identifier with Neural Netwroks](#deer-identifier-with-neural-netwroks)
+2. [Sentiment Analysis Software with GUI Interface](#sentiment-analysis-software-with-gui-interface)
+3. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
+4. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
+5. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
+6. [Book Price Prediction Model](#book-price-prediction-model)
+7. [K-Nearest Neighbour Fake Bills Classification and Regression](#knn-fake-bills-classification-and-regression)
+8. [McDonald's Rating Prediction Project](#mcdonalds-rating-prediction-project)
+9. [Titanic Data Analysis Project](#titanic-data-analysis-project)
+10. [Spam Filter using Multiple Algorithms](#spam-filter-multiple-algorithms)
+11. [Housing Linear Model](#housing-linear-model)
+
+
+
 
 
 
@@ -68,6 +72,148 @@ Although the model has achieved a decent accuracy, there is always room for impr
 This Deer Identifier project demonstrates how to build, train, and deploy a deep learning model for image classification. With further improvements and optimizations, the model can be made more accurate and robust for real-world applications.
 
 Feel free to explore the code and make enhancements to the project. There's also the model attached. Happy coding! 🦌📸
+
+
+
+
+
+## Sentiment-Analysis-Software-with-GUI-Interface
+
+### Overview
+
+![Sentiment Analysis GUI](https://github.com/adodea8991/00-ML/blob/main/emotions-nlp/emotion.py)
+
+
+This repository contains a sentiment analysis software with a Graphical User Interface (GUI) for performing sentiment analysis on input sentences. The software is designed to predict the emotional state (sentiment) associated with a given sentence. The GUI allows users to interact with the model easily, providing sentences for sentiment analysis and visualizing the results.
+
+### Data Preparation
+
+The sentiment analysis model is trained on a dataset of sentences along with their corresponding emotional states (e.g., joy, sadness, fear). The data is stored in three separate .txt files:
+
+- `train.txt`: Used for training the model.
+- `test.txt`: Used for testing the model's performance.
+- `val.txt`: Used for validation during model development.
+
+Each line in these files consists of a sentence and its emotional state, separated by a semicolon.
+
+### Model Training
+
+The sentiment analysis model is implemented using scikit-learn's Logistic Regression algorithm. The textual data is transformed into numerical features using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer. The TF-IDF representation is then scaled using the StandardScaler to ensure better convergence during training.
+
+To address the convergence warning encountered with the default solver (`lbfgs`), we use the 'liblinear' solver, which is more suitable for small datasets. We also increase the number of iterations (`max_iter`) to allow the model to converge effectively.
+
+### GUI Interface
+
+The GUI interface is developed using the PySimpleGUI library, making it user-friendly and intuitive. The main GUI window provides two functionalities:
+
+1. **Model Evaluation**: The user can upload the `test.txt` file to evaluate the model's performance, displaying accuracy and F1 score metrics.
+
+2. **Real-Time Sentiment Analysis**: The user can input sentences in the provided text box and click the "Analyze" button to get the predicted sentiment for each sentence.
+
+## Dependencies
+
+The sentiment analysis software requires the following dependencies:
+
+- Python 3.10
+- Pandas
+- scikit-learn
+- PySimpleGUI
+
+Install these dependencies using the following command:
+
+```bash
+pip install pandas scikit-learn PySimpleGUI
+```
+
+## How to Use
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/adodea8991/00-ml/emotions-nlp.git
+cd emotions-nlp
+```
+
+2. Prepare your data:
+
+   Place the `train.txt`, `test.txt`, and `val.txt` files in the repository's root directory. Ensure that the data is formatted as described above.
+
+3. Run the sentiment analysis software:
+
+```bash
+python emotion.py
+```
+
+The GUI interface will open, allowing you to evaluate the model and perform real-time sentiment analysis.
+
+
+
+
+
+
+
+## Netflix-Genre-Prediction-Project
+
+![Rating Accuracy Prediction V2](https://github.com/adodea8991/00-ML/blob/main/netflix-recomandation/confusion_matrix_v2.png)
+
+This project aims to build a machine learning model that predicts the genre of movies and TV shows on Netflix based on their descriptions. We will use the "netflix_titles.csv" dataset, which contains information about the titles, descriptions, and ratings of various shows on Netflix.
+
+### Project Overview
+
+The project is divided into the following steps:
+
+1. Data Loading: Load the Netflix dataset from "netflix_titles.csv" and preprocess the data to remove missing values.
+
+2. Data Split: Perform a 70-30 split of the dataset into training and testing sets.
+
+3. Text Vectorization: Convert the description text into numerical features using the TF-IDF vectorization technique.
+
+4. Model Training: Train a Support Vector Classification (SVC) model on the training data to predict the genre labels based on the descriptions.
+
+5. Model Evaluation: Evaluate the model's performance using a confusion matrix to visualize how well it predicts the genre labels on the test data.
+
+### Getting Started
+
+### Prerequisites
+
+Make sure you have the following libraries installed in your Python environment:
+
+- pandas
+- scikit-learn
+- matplotlib
+- numpy
+
+### Installation
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/adodea8991/00-ML/netflix-genre-prediction.git
+```
+
+### Usage
+
+1. Place the "netflix_titles.csv" file in the project directory.
+
+2. Run the "rating.py" script to train the model and evaluate its performance:
+
+```bash
+python rating.py
+```
+
+3. The script will display the confusion matrix, showing the model's accuracy in predicting the genre labels.
+
+![Rating Accuracy Prediction](https://github.com/adodea8991/00-ML/blob/main/netflix-recomandation/confusion_matrix.png)
+
+### Results
+
+The trained model will predict the genre labels of movies and TV shows on Netflix based on their descriptions. The confusion matrix will provide insights into how well the model performs for each genre class.
+
+
+
+
+
+
 
 
 
