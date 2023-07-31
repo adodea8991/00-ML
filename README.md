@@ -4,7 +4,7 @@
 
 1. [Deer Identifier with Neural Netwroks](#deer-identifier-with-neural-netwroks)
 2. [Sentiment Analysis Software with GUI Interface](#sentiment-analysis-software-with-gui-interface)
-3. [Netflix Rating Classifier](#netflix-genre-prediction-project)
+3. [Netflix Rating Classifier and NER](#netflix-genre-prediction-and-ner-project)
 4. [Credit Classification Project using Multiple Algorithms](#credit-classification-project)
 5. [Fruit Freshness Identifier Project via SVM and Random Forest](#fruit-freshness-identifier-project-via-svm-and-random-forest)
 6. [Cancer Diagnosis using Machine Learning](#cancer-diagnosis-using-machine-learning)
@@ -151,7 +151,7 @@ The GUI interface will open, allowing you to evaluate the model and perform real
 
 
 
-## Netflix-Genre-Prediction-Project
+## Netflix-Genre-Prediction-and-NER-Project
 
 ![Rating Accuracy Prediction V2](https://github.com/adodea8991/00-ML/blob/main/Netflix-Recomandation/Confusion_matrix_v2.png)
 
@@ -181,6 +181,8 @@ Make sure you have the following libraries installed in your Python environment:
 - scikit-learn
 - matplotlib
 - numpy
+- random
+- spacy
 
 ### Installation
 
@@ -189,6 +191,10 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/adodea8991/00-ML/netflix-genre-prediction.git
 ```
+
+
+
+
 
 ### Usage
 
@@ -210,8 +216,38 @@ The trained model will predict the genre labels of movies and TV shows on Netfli
 
 
 
+### Netflix Genre Named Entity Recognition (NER)
+
+![Named Entity Recognition](https://github.com/adodea8991/00-ML/blob/main/Netflix-Recomandation/ner.png)
+
+This project demonstrates how to perform Named Entity Recognition (NER) on movie descriptions from the Netflix dataset using Python. The dataset "netflix_titles.csv" contains information about movie titles and their descriptions.
+
+Project Overview
+The main goal of this project is to identify and extract named entities from the descriptions of 5 randomly selected movies from the Netflix dataset. We will use the spaCy library, which provides a pre-trained model for Named Entity Recognition.
 
 
+# Load the spaCy model for Named Entity Recognition
+nlp = spacy.load("en_core_web_sm")
+
+# Load the Netflix dataset from "netflix_titles.csv"
+data = pd.read_csv("netflix_titles.csv")
+
+# Select 5 random descriptions
+random.seed(42)
+sample_data = data[["title", "description"]].dropna().sample(n=5)
+
+# Perform Named Entity Recognition on the descriptions
+for idx, (movie_name, description) in enumerate(zip(sample_data["title"], sample_data["description"])):
+    doc = nlp(description)
+    entities = [(ent.text, ent.label_) for ent in doc.ents]
+    print(f"Movie Name {idx + 1}: {movie_name}")
+    print(f"Named Entities in Description {idx + 1}: {entities}\n")
+
+### Output
+The code will output the names of 5 randomly selected movies along with their corresponding named entities extracted from the descriptions.
+
+Conclusion
+This project demonstrates how to use Named Entity Recognition (NER) to extract named entities (e.g., persons, organizations, locations) from movie descriptions in the Netflix dataset. NER is a valuable technique for understanding the content and context of text data, and it can be applied to various natural language processing tasks.
 
 
 
