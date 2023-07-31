@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+0. [Startup Idea Predictor](#startup-idea-predictor)
 1. [Deer Identifier with Neural Netwroks](#deer-identifier-with-neural-netwroks)
 2. [Sentiment Analysis Software with GUI Interface](#sentiment-analysis-software-with-gui-interface)
 3. [Netflix Rating Classifier and NER](#netflix-genre-prediction-and-ner-project)
@@ -17,6 +18,71 @@
 
 
 
+
+Sure! Below is a sample README file for the Startup Idea Predictor:
+
+## Startup-Idea-Predictor
+
+![The Trained Model](https://github.com/adodea8991/00-ML/blob/main/Kickstarter-result-detector/trained-model.png)
+
+
+The Startup Idea Predictor is a simple chatbot that uses a trained model to predict whether a given startup idea is likely to be a "Failure" or "Success". The chatbot uses the DistilBERT model for sequence classification, which has been fine-tuned on a labeled dataset of startup ideas and their outcomes.
+
+### Requirements
+
+To run the Startup Idea Predictor, you need the following dependencies:
+
+- Python 3.x
+- Transformers library (`transformers`)
+- PyTorch
+- Flask (for the web version, optional)
+
+You can install the required packages using the following command:
+
+```bash
+pip install transformers torch flask
+```
+
+### Getting Started
+
+1. Clone this repository to your local machine.
+
+```bash
+git clone https://github.com/your-username/startup-idea-predictor.git
+cd startup-idea-predictor
+```
+
+2. Download or train your model.
+
+You can either download a pre-trained DistilBERT model checkpoint and use it for inference or train your own model using the provided training script.
+
+3. Update the model path.
+
+In the `simple_chatbot.py` script, update the variable `model_path` with the path to your trained model checkpoint.
+
+4. Run the Terminal Version
+
+To use the chatbot in the terminal, run the following command:
+
+```bash
+python simple_chatbot.py
+```
+
+5. Use the Web Version (optional)
+
+If you prefer to have a web-based chatbot, the project includes a Flask app that serves as a simple web interface for the chatbot.
+
+To run the web version, execute the following command:
+
+```bash
+python app.py
+```
+
+This will start the Flask development server, and you can access the chatbot in your web browser by visiting `http://127.0.0.1:5000`.
+
+6. Enter your Startup Ideas
+
+Once the chatbot is running, enter your startup ideas, and the chatbot will predict whether they are likely to be a "Failure" or "Success" based on the trained model.
 
 
 
